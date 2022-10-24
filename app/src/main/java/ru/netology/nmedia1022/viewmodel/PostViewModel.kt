@@ -1,7 +1,9 @@
 package ru.netology.nmedia1022.viewmodel
 
+import android.view.View
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import ru.netology.nmedia1022.databinding.ActivityMainBinding
 import ru.netology.nmedia1022.dto.Post
 import ru.netology.nmedia1022.repository.PostRepository
 import ru.netology.nmedia1022.repository.PostRepositoryInMemory
@@ -32,6 +34,14 @@ class PostViewModel : ViewModel() {
     //val edited = MutableLiveData(empty)
 
     fun save() {
+
+        edited.value?.let {
+            repository.save(it)
+        }
+        edited.value = empty
+    }
+
+    fun closeEdit() {
         edited.value?.let {
             repository.save(it)
         }
@@ -49,6 +59,7 @@ class PostViewModel : ViewModel() {
     }
 
     fun editContent(text: String) {
+
         val formatted = text.trim()
         if (edited.value?.content == formatted) {
             return

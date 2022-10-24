@@ -16,13 +16,6 @@ import ru.netology.nmedia1022.utils.Utils
 import ru.netology.nmedia1022.viewmodel.PostViewModel
 
 
-
-//typealias OnLikeListener = (post : Post) -> Unit
-//typealias ShareListener = (post : Post) -> Unit
-//typealias OnRemoveListener = (post : Post) -> Unit
-
-
-
 class PostViewHolder(
     private val binding: CardPostBinding,
     private val listener: PostActionListener
@@ -65,6 +58,9 @@ class PostViewHolder(
                listener.share(post)
             }
 
+
+
+
     }
     }
 }
@@ -84,12 +80,11 @@ interface PostActionListener {
     fun like (post: Post)
     fun delete (post: Post)
     fun share (post: Post)
+ //fun closeEdit (post: Post)
 }
 class PostsAdapter(
     private val listener: PostActionListener
-//    private val onLikeListener: OnLikeListener,
-//    private val shareListener: ShareListener,
-//    private val onRemoveListener: OnRemoveListener
+
 
 ): ListAdapter<Post, PostViewHolder>(PostDiffItemCallback()) {
 
@@ -106,9 +101,6 @@ class PostsAdapter(
         holder.bind(getItem(position))
     }
 
-    //
-
-    //
 }
 
 class PostDiffItemCallback : DiffUtil.ItemCallback<Post>() {

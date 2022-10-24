@@ -9,4 +9,5 @@ interface PostRepository {
     fun save(post: Post)
     //delete post
     fun removeById(id: Long)
+  //  fun closeEdit(id: Long)
 }

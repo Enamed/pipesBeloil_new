@@ -79,10 +79,13 @@ class PostRepositoryInMemory : PostRepository {
         data.value = posts
     }
 
+//    override fun closeEdit(id: Long) {
+//        posts = posts.filter { it.id != id }
+//        data.value = posts
+//    }
+
     override fun save(post: Post) {
         if (post.id == 0L) {
-
-
             posts = listOf(
                 post.copy(id = posts.firstOrNull()?.id?.inc() ?: 0)
             ) + posts
