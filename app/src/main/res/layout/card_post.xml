@@ -38,16 +38,33 @@
         app:layout_constraintStart_toStartOf="@id/author"
         app:layout_constraintTop_toBottomOf="@+id/author" />
 
-    <ImageView
-        android:id="@+id/menu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/author"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_baseline_more_vert_24" />
+    <com.google.android.material.button.MaterialButton
+            android:id="@+id/menu"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+        android:background="@android:color/transparent"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/author"
+            app:layout_constraintTop_toTopOf="parent"
+            app:icon="@drawable/ic_baseline_more_vert_24"
+
+        style="@style/MenuButton"
+
+        />
+
+
+    <!--    <ImageView-->
+<!--        android:id="@+id/menu"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:layout_marginEnd="16dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/author"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:srcCompat="@drawable/ic_baseline_more_vert_24" />-->
 
     <androidx.constraintlayout.widget.Barrier
         android:id="@+id/barrier2"
@@ -77,43 +94,95 @@
         app:barrierDirection="bottom"
         app:constraint_referenced_ids="content" />
 
-    <ImageView
-        android:id="@+id/share"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:layout_marginTop="5dp"
-        app:layout_constraintEnd_toEndOf="@+id/published"
-        app:layout_constraintStart_toEndOf="@+id/countLike"
-        app:layout_constraintTop_toBottomOf="@+id/content"
-        app:srcCompat="@drawable/ic_baseline_share_24" />
 
-    <TextView
-        android:id="@+id/countShare"
-        android:layout_width="wrap_content"
-        android:layout_height="25dp"
-        android:layout_marginStart="4dp"
-        android:text="22"
-        app:layout_constraintBottom_toBottomOf="@+id/share"
-        app:layout_constraintStart_toEndOf="@+id/share" />
+    <!--    <ImageView-->
+    <!--        android:id="@+id/like"-->
+    <!--        android:layout_width="25dp"-->
+    <!--        android:layout_height="25dp"-->
+    <!--        android:layout_marginTop="5dp"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/avatar"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/content"-->
+    <!--        app:srcCompat="@drawable/ic_baseline_favorite_border_24" />-->
 
 
-    <ImageView
+    <!--    <com.google.android.material.button.MaterialButton-->
+    <!--        android:id="@+id/like"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="5dp"-->
+    <!--        android:checkable="true"-->
+    <!--        style="@style/Widget.AppTheme.LikeButton"-->
+    <!--        app:icon="@drawable/like_selector"-->
+    <!--        app:iconTint="@color/like_color_selector"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/avatar"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/content"-->
+    <!--        tools:checked="false" />-->
+    <!--    style="@style/Widget.AppCompat.CompoundButton.CheckBox"-->
+
+
+    <!--        android:buttonTint="@color/like_color_selector"-->
+    <!--        android:button="@drawable/like_selector"-->
+
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/countLike"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="25dp"-->
+    <!--        android:layout_marginStart="4dp"-->
+    <!--        android:text="1500"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@+id/like"-->
+    <!--        app:layout_constraintStart_toEndOf="@+id/like" />-->
+
+    <!--    app:layout_constraintStart_toStartOf="@+id/avatar"-->
+
+
+    <!--    app:layout_constraintTop_toBottomOf="@+id/content"-->
+
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/like"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:layout_marginTop="5dp"
-        app:layout_constraintStart_toStartOf="@+id/avatar"
-        app:layout_constraintTop_toBottomOf="@+id/content"
-        app:srcCompat="@drawable/ic_baseline_favorite_border_24" />
-
-    <TextView
-        android:id="@+id/countLike"
+        style="@style/LikeButton"
         android:layout_width="wrap_content"
-        android:layout_height="25dp"
-        android:layout_marginStart="4dp"
-        android:text="1500"
-        app:layout_constraintBottom_toBottomOf="@+id/like"
-        app:layout_constraintStart_toEndOf="@+id/like" />
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toTopOf="@+id/polosa"
+        app:layout_constraintStart_toStartOf="@+id/avatar"
+        tools:checked="false" />
+
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/countShare"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="25dp"-->
+    <!--        android:layout_marginStart="4dp"-->
+    <!--        android:text="22"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@+id/share"-->
+    <!--        app:layout_constraintStart_toEndOf="@+id/share" />-->
+
+
+    <!--    <com.google.android.material.button.MaterialButton-->
+    <!--        android:id="@+id/visio"-->
+    <!--        style="@style/LikeButton"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginStart="5dp"-->
+    <!--        android:background="@android:color/transparent"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/polosa"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/avatar"-->
+    <!--        tools:checked="false" />-->
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/share"
+        style="@style/ShareButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        app:layout_constraintEnd_toEndOf="@+id/published"
+        app:layout_constraintStart_toEndOf="@+id/like"
+        app:layout_constraintTop_toBottomOf="@+id/content"
+        tools:checked="false" />
 
     <ImageView
         android:id="@+id/visio"
@@ -125,6 +194,7 @@
         app:srcCompat="@drawable/ic_baseline_visibility_24" />
 
     <TextView
+
         android:id="@+id/countVisio"
         android:layout_width="wrap_content"
         android:layout_height="25dp"
@@ -137,15 +207,17 @@
         android:id="@+id/polosa"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
+
         android:background="#E80000"
         android:backgroundTint="#FF0000"
         android:text="                                                      "
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/share" />
+        app:layout_constraintTop_toBottomOf="@+id/like" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--    android:layout_marginStart="16dp"-->
+<!--    android:layout_marginTop="8dp"-->
+<!--    android:layout_marginEnd="16dp"-->

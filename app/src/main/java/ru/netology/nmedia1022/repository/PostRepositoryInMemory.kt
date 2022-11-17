@@ -7,43 +7,14 @@ import ru.netology.nmedia1022.dto.Post
 class PostRepositoryInMemory : PostRepository {
 
     private var posts = listOf(
-        Post(
-            id = 4,
-            author = "ID =4 Нетология - университет интернет профессий",
-            content = "Привет, это новая Нетология! Когда-то Нетология начиналась с интенсивов по онлайн-маркетингу. Затем появи",
-            published = "16 october 2022 in 11:27",
-            likedByMe = false,
-            countLike = 999,
-            countShare = 12,
-            countVisio = 9_000
-        ),
-        Post(
-            id = 3,
-            author = "ID =3 Нетология - университет интернет профессий",
-            content = "Привет, это новая Нетология! Когда-то Нетология начиналась с интенсивов по онлайн-маркетингу. Затем появи",
-            published = "16 october 2022 in 11:27",
-            likedByMe = false,
-            countLike = 999,
-            countShare = 12,
-            countVisio = 9_000
-        ),
-        Post(
-            id = 2,
-            author = "ID =2 Нетология - университет интернет профессий",
-            content = "Привет, это новая Нетология! Когда-то Нетология начиналась с интенсивов по онлайн-маркетингу. Затем появи",
-            published = "16 october 2022 in 11:27",
-            likedByMe = false,
-            countLike = 999,
-            countShare = 12,
-            countVisio = 9_000
-        ),
+
         Post(
             id = 1,
             author = "ID = 1 Нетология - университет интернет профессий",
             content = "Привет, это новая Нетология! Когда-то Нетология начиналась с интенсивов по онлайн-маркетингу. Затем появи",
             published = "16 october 2022 in 11:27",
             likedByMe = false,
-            countLike = 999,
+            likes = 0,
             countShare = 12,
             countVisio = 1_000
         )
@@ -57,7 +28,8 @@ class PostRepositoryInMemory : PostRepository {
         posts = posts.map {
             if (it.id != id) it else it.copy(
                 likedByMe = !it.likedByMe,
-                countLike = if (it.likedByMe) it.countLike - 1 else it.countLike + 1
+                likes = if (it.likedByMe) it.likes - 1 else it.likes + 1
+
             )
         }
         data.value = posts

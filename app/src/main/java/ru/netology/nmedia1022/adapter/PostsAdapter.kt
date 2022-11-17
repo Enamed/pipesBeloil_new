@@ -26,12 +26,19 @@ class PostViewHolder(
         author.text = post.author
         published.text = post.published
         content.text = post.content
-            countLike.text = Utils.numbers(post.countLike)
-            countShare.text = Utils.numbers(post.countShare)
-            countVisio.text = Utils.numbers(post.countVisio)
-        like.setImageResource(
-            if (post.likedByMe) R.drawable.ic_liked_24 else R.drawable.ic_baseline_favorite_border_24
-        )
+
+        //    countLike.text = Utils.numbers(post.countLike)
+      //      countShare.text = Utils.numbers(post.countShare)
+          countVisio.text = Utils.numbers(post.countVisio)
+            like.isChecked = post.likedByMe
+
+            like.text = post.likes.toString()
+            share.text = post.countShare.toString()
+           // visio.text = post.countVisio.toString()
+
+//            (
+//            if (post.likedByMe) R.drawable.ic_liked_24 else R.drawable.ic_baseline_favorite_border_24
+//        )
         like.setOnClickListener {
           listener.like(post)
         }

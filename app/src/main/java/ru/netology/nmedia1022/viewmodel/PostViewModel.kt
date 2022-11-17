@@ -14,9 +14,10 @@ private val empty = Post(
     author = "",
     likedByMe = false,
     published = "",
-    countLike = 0,
+    //countLike = 0,
     countShare = 0,
-    countVisio = 0
+    countVisio = 0,
+    likes = 0
 )
 
 class PostViewModel : ViewModel() {
@@ -59,6 +60,7 @@ class PostViewModel : ViewModel() {
     }
 
     fun editContent(text: String) {
+
 
         val formatted = text.trim()
         if (edited.value?.content == formatted) {
