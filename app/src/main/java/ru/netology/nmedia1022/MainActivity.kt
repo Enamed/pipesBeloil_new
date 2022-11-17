@@ -1,9 +1,11 @@
 package ru.netology.nmedia1022
 
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.activity.result.launch
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import ru.netology.nmedia1022.adapter.PostActionListener
@@ -38,6 +40,14 @@ class MainActivity : AppCompatActivity() {
                 }
                 override fun share(post: Post) {
                     viewModel.share(post.id)
+                    //создание интента для шаринга
+                    val intent = Intent().apply {
+                        action = Intent.ACTION_SEND
+                        putExtra(Intent.EXTRA_TEXT, post.content)
+                        type = "text/plain"
+                    }
+                   val shareIntent = Intent.createChooser(intent, getString(R.string.share))
+                    startActivity(intent)
                 }
 
             }
@@ -49,7 +59,21 @@ class MainActivity : AppCompatActivity() {
             adapter.submitList(posts)
         }
 
+//        добавление новости через кнопку справа внизу
+
+        val newPostLauncher = registerForActivityResult(NewPostResultContract()) { result ->
+result ?: return@registerForActivityResult
+            viewModel.changeContent(result)
+            viewModel.save()
+        }
+
         with(binding) {
+
+            fab.setOnClickListener{
+    newPostLauncher.launch()
+            }
+//
+
             close.setOnClickListener {
              //   close.setVisibility(View.INVISIBLE)
                 AndroidUtils.hideKeyboard(content)

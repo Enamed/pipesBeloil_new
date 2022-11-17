@@ -17,6 +17,26 @@ class PostRepositoryInMemory : PostRepository {
             likes = 0,
             countShare = 12,
             countVisio = 1_000
+        ),
+        Post(
+            id = 2,
+            author = "ID = 2 Нетология - университет интернет профессий",
+            content = "Привет, это новая Нетология! Когда-то Нетология начиналась с интенсивов по онлайн-маркетингу. Затем появи",
+            published = "16 october 2022 in 11:27",
+            likedByMe = false,
+            likes = 11987,
+            countShare = 12,
+            countVisio = 1_000
+        ),
+        Post(
+            id = 3,
+            author = "ID = 3 Нетология - университет интернет профессий",
+            content = "Привет, это новая Нетология! Когда-то Нетология начиналась с интенсивов по онлайн-маркетингу. Затем появи",
+            published = "16 october 2022 in 11:27",
+            likedByMe = false,
+            likes = 2863,
+            countShare = 12,
+            countVisio = 1_000
         )
     )
     private val data = MutableLiveData(posts)

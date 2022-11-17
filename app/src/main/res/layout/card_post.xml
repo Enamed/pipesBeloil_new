@@ -177,7 +177,7 @@
         style="@style/ShareButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
+        android:contentDescription="@string/share"
 
         app:layout_constraintEnd_toEndOf="@+id/published"
         app:layout_constraintStart_toEndOf="@+id/like"

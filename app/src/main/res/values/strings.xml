@@ -2,4 +2,5 @@
     <string name="app_name">НМедиа1022</string>
     <string name="hello">Привет мир!</string>
     <string name="blank_content_error">Content is blank</string>
+    <string name="share">Share</string>
 </resources>
