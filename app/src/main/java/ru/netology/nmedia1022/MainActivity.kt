@@ -125,9 +125,3 @@ result ?: return@registerForActivityResult
     }
 }
 
-//internal class TListener : OnTouchListener {
-//    override fun onTouch(v: View, event: MotionEvent): Boolean {
-//        // TODO Auto-generated method stub
-//        return false
-//    }
-//}

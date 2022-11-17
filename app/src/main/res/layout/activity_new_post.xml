@@ -4,16 +4,36 @@
             xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+
         tools:context=".NewPostActivity">
 
     <EditText
         android:id="@+id/edit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="start|top"
-        android:inputType="textMultiLine"
         android:background="@android:color/transparent"
+        android:gravity="start|top"
+        android:hint="Введите текст"
+        android:inputType="textMultiLine"
+
         ></EditText>
+
+
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:id="@+id/edit"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="Введите текст"-->
+<!--        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">-->
+
+<!--        <com.google.android.material.textfield.TextInputEditText-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            />-->
+
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+
 
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/bottomAppBar"
@@ -32,7 +52,6 @@
         app:srcCompat="@drawable/ic_baseline_slow_motion_video_24"
         app:layout_anchor="@id/bottomAppBar"
 ></com.google.android.material.floatingactionbutton.FloatingActionButton>
-
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
