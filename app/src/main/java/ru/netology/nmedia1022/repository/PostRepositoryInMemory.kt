@@ -6,12 +6,14 @@ import ru.netology.nmedia1022.dto.Post
 
 class PostRepositoryInMemory : PostRepository {
 
+    private var postId = 1L
+
     private var posts = listOf(
 
         Post(
-            id = 1,
-            author = "ID = 1 Нетология - университет интернет профессий",
-            content = "Привет, это новая Нетология! Когда-то Нетология начиналась с интенсивов по онлайн-маркетингу. Затем появи",
+            id = postId++,
+            author = "ID = 0 Нетология - университет интернет профессий",
+            content = "ID = 0 Привет, это новая Нетология! Когда-то Нетология начиналась с интенсивов по онлайн-маркетингу. Затем появи",
             published = "16 october 2022 in 11:27",
             likedByMe = false,
             likes = 0,
@@ -19,9 +21,9 @@ class PostRepositoryInMemory : PostRepository {
             countVisio = 1_000
         ),
         Post(
-            id = 2,
-            author = "ID = 2 Нетология - университет интернет профессий",
-            content = "Привет, это новая Нетология! Когда-то Нетология начиналась с интенсивов по онлайн-маркетингу. Затем появи",
+            id = postId++,
+            author = "ID = 1 Нетология - университет интернет профессий",
+            content = "ID = 1 Привет, это новая Нетология! Когда-то Нетология начиналась с интенсивов по онлайн-маркетингу. Затем появи",
             published = "16 october 2022 in 11:27",
             likedByMe = false,
             likes = 11987,
@@ -29,9 +31,9 @@ class PostRepositoryInMemory : PostRepository {
             countVisio = 1_000
         ),
         Post(
-            id = 3,
-            author = "ID = 3 Нетология - университет интернет профессий",
-            content = "Привет, это новая Нетология! Когда-то Нетология начиналась с интенсивов по онлайн-маркетингу. Затем появи",
+            id = postId++,
+            author = "ID = 2 Нетология - университет интернет профессий",
+            content = "ID = 2 Привет, это новая Нетология! Когда-то Нетология начиналась с интенсивов по онлайн-маркетингу. Затем появи",
             published = "16 october 2022 in 11:27",
             likedByMe = false,
             likes = 2863,

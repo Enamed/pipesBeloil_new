@@ -3,6 +3,7 @@ package ru.netology.nmedia1022.viewmodel
 import android.view.View
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import kotlinx.android.synthetic.main.activity_edit_post.*
 import ru.netology.nmedia1022.databinding.ActivityMainBinding
 import ru.netology.nmedia1022.dto.Post
 import ru.netology.nmedia1022.repository.PostRepository
@@ -24,6 +25,7 @@ class PostViewModel : ViewModel() {
     private val repository: PostRepository = PostRepositoryInMemory()
     val data = repository.getALL()
     val edited = MutableLiveData(empty)
+    val editedTextall = MutableLiveData(empty)
     fun likeById(id: Long) = repository.likeById(id)
     //удаление
     fun removeById(id: Long) = repository.removeById(id)
@@ -68,6 +70,13 @@ class PostViewModel : ViewModel() {
         }
         edited.value = edited.value?.copy(content = formatted)
     }
+
+    fun editedTextall(text: String) {
+
+
+    }
+
+
 
 
 }

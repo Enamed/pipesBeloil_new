@@ -8,6 +8,7 @@ import android.widget.Toast
 import androidx.activity.result.launch
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+
 import ru.netology.nmedia1022.adapter.PostActionListener
 import ru.netology.nmedia1022.adapter.PostsAdapter
 import ru.netology.nmedia1022.databinding.ActivityMainBinding
@@ -67,11 +68,18 @@ result ?: return@registerForActivityResult
             viewModel.save()
         }
 
+
+
         with(binding) {
 
             fab.setOnClickListener{
     newPostLauncher.launch()
             }
+
+
+//            fab1.setOnClickListener{
+//                editPostLauncher.launch()
+//            }
 //
 
             close.setOnClickListener {
@@ -81,12 +89,12 @@ result ?: return@registerForActivityResult
                 binding.close.visibility = View.GONE
             }
 
-            content.setOnClickListener(){
-                binding.close.visibility = View.VISIBLE
-
-
-
-            }
+//            content.setOnClickListener(){
+//                binding.close.visibility = View.VISIBLE
+//
+//
+//
+//            }
 
 //            content.setOnClickListener(View.OnClickListener {
 //                Toast.makeText(this@MainActivity, getString(R.string.blank_content_error), Toast.LENGTH_SHORT).show()
@@ -109,19 +117,32 @@ result ?: return@registerForActivityResult
                 content.clearFocus()
                 AndroidUtils.hideKeyboard(content)
             }
+
+
+
+
+            val editPostLauncher = registerForActivityResult(EditPostResultContract()) { text ->
+                text ?: return@registerForActivityResult
+                viewModel.changeContent(text)
+                viewModel.save()
+            }
             viewModel.edited.observe(this@MainActivity){
 
                 if (it.id == 0L) {
-
                     return@observe
+
                 }
-                binding.close.visibility = View.VISIBLE
-          content.requestFocus()
-                content.setText(it.content)
+
+                editPostLauncher.launch(it.content)
+//                binding.close.visibility = View.VISIBLE
+//          content.requestFocus()
+             // edit.setText(it.content)
             }
           //binding.close.visibility = View.INVISIBLE
         }
 
     }
 }
+
+
 

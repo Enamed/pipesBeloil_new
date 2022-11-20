@@ -18,10 +18,18 @@
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/ic_baseline_slow_motion_video_24"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        ></com.google.android.material.floatingactionbutton.FloatingActionButton>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_baseline_slow_motion_video_24"></com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/fab1"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+
+
+<!--        app:srcCompat="@drawable/ic_baseline_slow_motion_video_24"></com.google.android.material.floatingactionbutton.FloatingActionButton>-->
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/list"
@@ -53,8 +61,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/save"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/toolsBarrier"
-        />
+        app:layout_constraintTop_toTopOf="@id/toolsBarrier" />
 
     <ImageView
         android:id="@+id/save"
@@ -74,11 +81,11 @@
         app:layout_constraintBottom_toTopOf="@+id/save"
         app:layout_constraintEnd_toEndOf="parent" />
 
-<!--    <androidx.constraintlayout.widget.Group-->
-<!--        android:id="@+id/group"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--android:visibility="gone"-->
-<!--        app:constraint_referenced_ids="save,close,content"-->
-<!--        />-->
+    <!--    <androidx.constraintlayout.widget.Group-->
+    <!--        android:id="@+id/group"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--android:visibility="gone"-->
+    <!--        app:constraint_referenced_ids="save,close,content"-->
+    <!--        />-->
 </androidx.constraintlayout.widget.ConstraintLayout>

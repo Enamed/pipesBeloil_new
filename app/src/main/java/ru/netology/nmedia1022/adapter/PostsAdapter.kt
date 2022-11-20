@@ -1,6 +1,5 @@
 package ru.netology.nmedia1022.adapter
 
-import android.system.Os.remove
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.PopupMenu
@@ -10,10 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import ru.netology.nmedia1022.R
 import ru.netology.nmedia1022.databinding.CardPostBinding
 import ru.netology.nmedia1022.dto.Post
-import ru.netology.nmedia1022.adapter.PostViewHolder
 import ru.netology.nmedia1022.utils.Utils
-
-import ru.netology.nmedia1022.viewmodel.PostViewModel
 
 
 class PostViewHolder(
@@ -29,8 +25,10 @@ class PostViewHolder(
 
         //    countLike.text = Utils.numbers(post.countLike)
       //      countShare.text = Utils.numbers(post.countShare)
-          countVisio.text = Utils.numbers(post.countVisio)
+        //  countVisio.text = Utils.numbers(post.countVisio)
+            countVisio.text = Utils.numbers(post.countVisio)
             like.isChecked = post.likedByMe
+
 
             like.text = post.likes.toString()
             share.text = post.countShare.toString()
@@ -42,6 +40,9 @@ class PostViewHolder(
         like.setOnClickListener {
           listener.like(post)
         }
+
+
+
             menu.setOnClickListener {
                 PopupMenu(it.context, it).apply {
                     inflate(R.menu.posts_menu)
