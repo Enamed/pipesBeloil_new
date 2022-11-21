@@ -39,32 +39,18 @@
         app:layout_constraintTop_toBottomOf="@+id/author" />
 
     <com.google.android.material.button.MaterialButton
-            android:id="@+id/menu"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-        android:background="@android:color/transparent"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/author"
-            app:layout_constraintTop_toTopOf="parent"
-            app:icon="@drawable/ic_baseline_more_vert_24"
-
+        android:id="@+id/menu"
         style="@style/MenuButton"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/transparent"
+        app:icon="@drawable/ic_baseline_more_vert_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/author"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        />
-
-
-    <!--    <ImageView-->
-<!--        android:id="@+id/menu"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginTop="16dp"-->
-<!--        android:layout_marginEnd="16dp"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toEndOf="@+id/author"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:srcCompat="@drawable/ic_baseline_more_vert_24" />-->
 
     <androidx.constraintlayout.widget.Barrier
         android:id="@+id/barrier2"
@@ -73,13 +59,13 @@
         app:barrierDirection="bottom"
         app:constraint_referenced_ids="avatar" />
 
+
     <TextView
         android:id="@+id/content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="12dp"
-
         android:layout_marginEnd="16dp"
         android:text="Привет, это новая Нетология! Когда-то Нетология начиналась с интенсивов по онлайн-маркетингу. Затем появились курсы по дизайну, разработке, аналитике и управлению. Мы растем сами и помагаем расти студентам от новичков до уверенных профессионалов. Но самое важное остается с нами: мы верим, что в каждом уже есть сила, которая заставляет хотеть больше, целиться выше, бежать быстрее. Наша миссия - помочь встать на путь роста и начать цепочку перемен."
         app:layout_constraintEnd_toEndOf="parent"
@@ -95,49 +81,6 @@
         app:constraint_referenced_ids="content" />
 
 
-    <!--    <ImageView-->
-    <!--        android:id="@+id/like"-->
-    <!--        android:layout_width="25dp"-->
-    <!--        android:layout_height="25dp"-->
-    <!--        android:layout_marginTop="5dp"-->
-    <!--        app:layout_constraintStart_toStartOf="@+id/avatar"-->
-    <!--        app:layout_constraintTop_toBottomOf="@+id/content"-->
-    <!--        app:srcCompat="@drawable/ic_baseline_favorite_border_24" />-->
-
-
-    <!--    <com.google.android.material.button.MaterialButton-->
-    <!--        android:id="@+id/like"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_marginTop="5dp"-->
-    <!--        android:checkable="true"-->
-    <!--        style="@style/Widget.AppTheme.LikeButton"-->
-    <!--        app:icon="@drawable/like_selector"-->
-    <!--        app:iconTint="@color/like_color_selector"-->
-    <!--        app:layout_constraintStart_toStartOf="@+id/avatar"-->
-    <!--        app:layout_constraintTop_toBottomOf="@+id/content"-->
-    <!--        tools:checked="false" />-->
-    <!--    style="@style/Widget.AppCompat.CompoundButton.CheckBox"-->
-
-
-    <!--        android:buttonTint="@color/like_color_selector"-->
-    <!--        android:button="@drawable/like_selector"-->
-
-
-    <!--    <TextView-->
-    <!--        android:id="@+id/countLike"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="25dp"-->
-    <!--        android:layout_marginStart="4dp"-->
-    <!--        android:text="1500"-->
-    <!--        app:layout_constraintBottom_toBottomOf="@+id/like"-->
-    <!--        app:layout_constraintStart_toEndOf="@+id/like" />-->
-
-    <!--    app:layout_constraintStart_toStartOf="@+id/avatar"-->
-
-
-    <!--    app:layout_constraintTop_toBottomOf="@+id/content"-->
-
     <com.google.android.material.button.MaterialButton
         android:id="@+id/like"
         style="@style/LikeButton"
@@ -150,28 +93,6 @@
         tools:checked="false" />
 
 
-    <!--    <TextView-->
-    <!--        android:id="@+id/countShare"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="25dp"-->
-    <!--        android:layout_marginStart="4dp"-->
-    <!--        android:text="22"-->
-    <!--        app:layout_constraintBottom_toBottomOf="@+id/share"-->
-    <!--        app:layout_constraintStart_toEndOf="@+id/share" />-->
-
-
-    <!--    <com.google.android.material.button.MaterialButton-->
-    <!--        android:id="@+id/visio"-->
-    <!--        style="@style/LikeButton"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_marginStart="5dp"-->
-    <!--        android:background="@android:color/transparent"-->
-    <!--        app:layout_constraintBottom_toTopOf="@+id/polosa"-->
-    <!--        app:layout_constraintStart_toStartOf="@+id/avatar"-->
-    <!--        tools:checked="false" />-->
-
-
     <com.google.android.material.button.MaterialButton
         android:id="@+id/share"
         style="@style/ShareButton"
@@ -181,16 +102,15 @@
 
         app:layout_constraintEnd_toEndOf="@+id/published"
         app:layout_constraintStart_toEndOf="@+id/like"
-        app:layout_constraintTop_toBottomOf="@+id/content"
+        app:layout_constraintTop_toBottomOf="@+id/video"
         tools:checked="false" />
 
     <ImageView
         android:id="@+id/visio"
         android:layout_width="25dp"
         android:layout_height="25dp"
-        android:layout_marginTop="5dp"
         app:layout_constraintEnd_toEndOf="@+id/author"
-        app:layout_constraintTop_toBottomOf="@+id/content"
+        app:layout_constraintTop_toBottomOf="@+id/video"
         app:srcCompat="@drawable/ic_baseline_visibility_24" />
 
     <TextView
@@ -216,8 +136,18 @@
         app:layout_constraintTop_toBottomOf="@+id/like" />
 
 
+    <ImageButton
+        android:id="@+id/video"
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/video3"
+
+        app:layout_constraintTop_toBottomOf="@+id/content"
+        tools:layout_editor_absoluteX="0dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 
-<!--    android:layout_marginStart="16dp"-->
-<!--    android:layout_marginTop="8dp"-->
-<!--    android:layout_marginEnd="16dp"-->
+    <!--    android:layout_marginStart="16dp"-->
+    <!--    android:layout_marginTop="8dp"-->
+    <!--    android:layout_marginEnd="16dp"-->

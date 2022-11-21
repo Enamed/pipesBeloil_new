@@ -18,7 +18,8 @@ class PostRepositoryInMemory : PostRepository {
             likedByMe = false,
             likes = 0,
             countShare = 12,
-            countVisio = 1_000
+            countVisio = 1_000,
+            video = "https://youtu.be/GQW-Yx52ku4"
         ),
         Post(
             id = postId++,
@@ -28,7 +29,8 @@ class PostRepositoryInMemory : PostRepository {
             likedByMe = false,
             likes = 11987,
             countShare = 12,
-            countVisio = 1_000
+            countVisio = 1_000,
+            video = "https://youtu.be/GQW-Yx52ku4"
         ),
         Post(
             id = postId++,
@@ -38,7 +40,8 @@ class PostRepositoryInMemory : PostRepository {
             likedByMe = false,
             likes = 2863,
             countShare = 12,
-            countVisio = 1_000
+            countVisio = 1_000,
+            video = null
         )
     )
     private val data = MutableLiveData(posts)
@@ -86,7 +89,7 @@ class PostRepositoryInMemory : PostRepository {
             data.value = posts
             return
         }
-       posts =  posts.map {
+        posts = posts.map {
             if (it.id == post.id) {
                 it.copy(content = post.content)
             } else {

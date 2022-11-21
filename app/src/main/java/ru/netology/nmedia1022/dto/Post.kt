@@ -10,6 +10,7 @@ data class Post (
 //    var countLike: Long,
     var countShare: Long,
     val countVisio: Long,
-    val likes:Int
+    val likes:Int,
+    val video: String? = null
 
 )

@@ -1,10 +1,7 @@
 package ru.netology.nmedia1022.viewmodel
 
-import android.view.View
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import kotlinx.android.synthetic.main.activity_edit_post.*
-import ru.netology.nmedia1022.databinding.ActivityMainBinding
 import ru.netology.nmedia1022.dto.Post
 import ru.netology.nmedia1022.repository.PostRepository
 import ru.netology.nmedia1022.repository.PostRepositoryInMemory
@@ -18,7 +15,8 @@ private val empty = Post(
     //countLike = 0,
     countShare = 0,
     countVisio = 0,
-    likes = 0
+    likes = 0,
+    video = null
 )
 
 class PostViewModel : ViewModel() {

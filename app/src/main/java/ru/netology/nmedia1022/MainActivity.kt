@@ -2,6 +2,7 @@ package ru.netology.nmedia1022
 
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
@@ -51,6 +52,11 @@ class MainActivity : AppCompatActivity() {
                     startActivity(intent)
                 }
 
+                override fun onVidioClicked(post: Post) {
+                    val youtubeInternet = Intent(Intent.ACTION_VIEW, Uri.parse(post.video))
+                    startActivity(youtubeInternet)
+                }
+
             }
         )
 
@@ -82,12 +88,12 @@ result ?: return@registerForActivityResult
 //            }
 //
 
-            close.setOnClickListener {
-             //   close.setVisibility(View.INVISIBLE)
-                AndroidUtils.hideKeyboard(content)
-                content.setText("")
-                binding.close.visibility = View.GONE
-            }
+//            close.setOnClickListener {
+//             //   close.setVisibility(View.INVISIBLE)
+//                AndroidUtils.hideKeyboard(content)
+//                content.setText("")
+//                binding.close.visibility = View.GONE
+//            }
 
 //            content.setOnClickListener(){
 //                binding.close.visibility = View.VISIBLE
@@ -99,24 +105,24 @@ result ?: return@registerForActivityResult
 //            content.setOnClickListener(View.OnClickListener {
 //                Toast.makeText(this@MainActivity, getString(R.string.blank_content_error), Toast.LENGTH_SHORT).show()
 //            })
-
-            save.setOnClickListener {
-                val text = content.text?.toString()
-                       binding.close.visibility = View.VISIBLE
-
-                if (text.isNullOrBlank()) {
-                    Toast.makeText(this@MainActivity, getString(R.string.blank_content_error), Toast.LENGTH_SHORT).show()
-                    return@setOnClickListener
-                }
-
-                viewModel.editContent(text)
-
-                viewModel.save()
-
-                content.setText("")
-                content.clearFocus()
-                AndroidUtils.hideKeyboard(content)
-            }
+//
+//            save.setOnClickListener {
+//                val text = content.text?.toString()
+//                       binding.close.visibility = View.VISIBLE
+//
+//                if (text.isNullOrBlank()) {
+//                    Toast.makeText(this@MainActivity, getString(R.string.blank_content_error), Toast.LENGTH_SHORT).show()
+//                    return@setOnClickListener
+//                }
+//
+//                viewModel.editContent(text)
+//
+//                viewModel.save()
+//
+//                content.setText("")
+//                content.clearFocus()
+//                AndroidUtils.hideKeyboard(content)
+//            }
 
 
 

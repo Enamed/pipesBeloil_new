@@ -47,45 +47,46 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:barrierDirection="top"
-        app:constraint_referenced_ids="save, content" />
+        app:constraint_referenced_ids="content"
+        tools:ignore="NotSibling" />
 
-    <EditText
-        android:id="@+id/content"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:autofillHints="no"
-        android:background="@android:color/transparent"
-        android:hint="Введи текст"
-        android:importantForAutofill="no"
-        android:inputType="textMultiLine"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/save"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/toolsBarrier" />
+<!--    <EditText-->
+<!--        android:id="@+id/content"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:autofillHints="no"-->
+<!--        android:background="@android:color/transparent"-->
+<!--        android:hint="Введи текст"-->
+<!--        android:importantForAutofill="no"-->
+<!--        android:inputType="textMultiLine"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toStartOf="@id/save"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="@id/toolsBarrier" />-->
 
-    <ImageView
-        android:id="@+id/save"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_save"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+<!--    <ImageView-->
+<!--        android:id="@+id/save"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:src="@drawable/ic_save"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent" />-->
 
-    <ImageView
-        android:id="@+id/close"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_baseline_close_24"
+<!--    <ImageView-->
+<!--        android:id="@+id/close"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:src="@drawable/ic_baseline_close_24"-->
 
-        android:visibility="gone"
-        app:layout_constraintBottom_toTopOf="@+id/save"
-        app:layout_constraintEnd_toEndOf="parent" />
+<!--        android:visibility="gone"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/save"-->
+<!--        app:layout_constraintEnd_toEndOf="parent" />-->
 
-    <!--    <androidx.constraintlayout.widget.Group-->
-    <!--        android:id="@+id/group"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--android:visibility="gone"-->
-    <!--        app:constraint_referenced_ids="save,close,content"-->
-    <!--        />-->
+<!--    &lt;!&ndash;    <androidx.constraintlayout.widget.Group&ndash;&gt;-->
+<!--    &lt;!&ndash;        android:id="@+id/group"&ndash;&gt;-->
+<!--    &lt;!&ndash;        android:layout_width="wrap_content"&ndash;&gt;-->
+<!--    &lt;!&ndash;        android:layout_height="wrap_content"&ndash;&gt;-->
+<!--    &lt;!&ndash;android:visibility="gone"&ndash;&gt;-->
+<!--    &lt;!&ndash;        app:constraint_referenced_ids="save,close,content"&ndash;&gt;-->
+<!--    &lt;!&ndash;        />&ndash;&gt;-->
 </androidx.constraintlayout.widget.ConstraintLayout>
