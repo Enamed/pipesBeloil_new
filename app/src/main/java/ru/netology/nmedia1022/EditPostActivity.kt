@@ -25,6 +25,10 @@ class EditPostActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val viewModel: PostViewModel by viewModels()
+
+
+
+
         //не понимаю как это работает
         binding.edit.setText(intent.getStringExtra(Intent.EXTRA_TEXT))
 
