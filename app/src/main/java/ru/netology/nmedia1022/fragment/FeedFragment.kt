@@ -9,8 +9,7 @@ import androidx.activity.result.launch
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import ru.netology.nmedia1022.activity.EditPostResultContract
-import ru.netology.nmedia1022.activity.NewPostResultContract
+
 import ru.netology.nmedia1022.R
 
 import ru.netology.nmedia1022.adapter.PostActionListener
@@ -24,20 +23,22 @@ import ru.netology.nmedia1022.viewmodel.PostViewModel
 
 class FeedFragment : Fragment(R.layout.feed) {
 
-
-
-
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = FeedBinding.bind(view)
+        val bundle = Bundle()
 
+//предоставляем одну viewModel для нескольких фрагментов
+        val viewModel: PostViewModel by viewModels(
+            ownerProducer = ::requireParentFragment
+        )
 
-        val viewModel: PostViewModel by viewModels()
         val adapter = PostsAdapter(
-            object : PostActionListener{
+            object : PostActionListener {
                 override fun edit(post: Post) {
                     viewModel.edit(post)
+                    bundle.putString("content", post.content)
+                    findNavController().navigate(R.id.to_newPostFragment, bundle)
                 }
 
                 override fun like(post: Post) {
@@ -47,6 +48,7 @@ class FeedFragment : Fragment(R.layout.feed) {
                 override fun delete(post: Post) {
                     viewModel.removeById(post.id)
                 }
+
                 override fun share(post: Post) {
                     viewModel.share(post.id)
                     //создание интента для шаринга
@@ -55,7 +57,7 @@ class FeedFragment : Fragment(R.layout.feed) {
                         putExtra(Intent.EXTRA_TEXT, post.content)
                         type = "text/plain"
                     }
-                   val shareIntent = Intent.createChooser(intent, getString(R.string.share))
+                    val shareIntent = Intent.createChooser(intent, getString(R.string.share))
                     startActivity(intent)
                 }
 
@@ -80,23 +82,21 @@ class FeedFragment : Fragment(R.layout.feed) {
 //            viewModel.save()
 //        }
 
-            binding.fab.setOnClickListener{
-                findNavController().navigate(R.id.to_newPostFragment)
-    //newPostLauncher.launch()
-            }
+        binding.fab.setOnClickListener {
+            findNavController().navigate(R.id.to_newPostFragment)
+            //newPostLauncher.launch()
+        }
 
 //            val editPostLauncher = registerForActivityResult(EditPostResultContract()) { text ->
 //                text ?: return@registerForActivityResult
 //                viewModel.changeContent(text)
 //                viewModel.save()
 //            }
-            viewModel.edited.observe(viewLifecycleOwner){
-                if (it.id == 0L) {
-                    return@observe
-                }
+        viewModel.edited.observe(viewLifecycleOwner) {
+            if (it.id == 0L) {
+                return@observe
+            }
 //                editPostLauncher.launch(it.content)
-
-
         }
 
     }

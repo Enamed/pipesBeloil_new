@@ -4,31 +4,28 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.findNavController
+import com.google.android.material.snackbar.BaseTransientBottomBar.LENGTH_INDEFINITE
+import com.google.android.material.snackbar.Snackbar
 import ru.netology.nmedia1022.R
-import ru.netology.nmedia1022.fragment.NewPostFragment.Companion.textArg
+import ru.netology.nmedia1022.databinding.ActivityAppBinding
 
-class AppActivity : AppCompatActivity(R.layout.activity_app) {
+
+
+class AppActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-
-
+        val binding = ActivityAppBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         intent?.let {
-            if (it.action != Intent.ACTION_SEND) {
-                return@let
-            }
+            if (it.action != Intent.ACTION_SEND) return@let
             val text = it.getStringExtra(Intent.EXTRA_TEXT)
-            if (text.isNullOrBlank()) {
-                return@let
-            }
-            intent.removeExtra(Intent.EXTRA_TEXT)
-            findNavController(R.id.nav_host_fragment).navigate(
-               R.id.to_newPostFragment,
-               Bundle(1).apply {
-                   textArg = text
-               }
-            )
+            if (text.isNullOrBlank()) Snackbar.make(
+                binding.root, R.string.blank_content_error,
+                LENGTH_INDEFINITE
+            ).setAction(android.R.string.ok) {
+                finish()
+            }.show()
         }
     }
 }

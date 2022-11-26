@@ -62,6 +62,13 @@ class PostViewModel(application: Application) : AndroidViewModel(application) {
             }
             edited.value = it.copy(content = text)
         }
+//    val text = content.trim()
+//        if(edited.value?.content == text) {
+//            return
+//        }
+//        edited.value = edited.value?.copy(content = text)
+
+
     }
 
     fun editContent(text: String) {
@@ -74,10 +81,6 @@ class PostViewModel(application: Application) : AndroidViewModel(application) {
         edited.value = edited.value?.copy(content = formatted)
     }
 
-    fun editedTextall(text: String) {
-
-
-    }
 
 
 

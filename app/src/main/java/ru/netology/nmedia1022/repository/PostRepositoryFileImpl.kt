@@ -44,6 +44,7 @@ class PostRepositoryFileImpl(
         if (file.exists()) {
             context.openFileInput(filename).bufferedReader().use {
                 posts = gson.fromJson(it, type)
+
                 data.value = posts
             }
         } else {
@@ -58,6 +59,7 @@ class PostRepositoryFileImpl(
             )
         }
         data.value = posts
+        sync()
     }
 
         override fun save(post: Post) {
