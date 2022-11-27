@@ -40,8 +40,8 @@ class fragment_single_post : Fragment(R.layout.fragment_single_post) {
             ownerProducer = ::requireParentFragment
         )
 
-        val id = arguments?.getLong("id")
-        var singlePost: Post? = null
+      //  val id = arguments?.getLong("id")
+       // var singlePost: Post? = null
 
         val postViewHolder = PostViewHolder(binding.post, object : PostActionListener {
             override fun edit(post: Post) {
@@ -67,7 +67,7 @@ class fragment_single_post : Fragment(R.layout.fragment_single_post) {
                         putExtra(Intent.EXTRA_TEXT, post.content)
                         type = "text/plain"
                     }
-                    val shareIntent = Intent.createChooser(intent, getString(R.string.share))
+                 //   val shareIntent = Intent.createChooser(intent, getString(R.string.share))
                     startActivity(intent)
             }
 
@@ -80,7 +80,7 @@ class fragment_single_post : Fragment(R.layout.fragment_single_post) {
 
 
 
-
+//выводит карточку
         viewModel.data.observe(viewLifecycleOwner) { posts ->
             val id = arguments?.textArg?.toLong()
             val post = posts.find { it.id == id } ?: kotlin.run {
@@ -92,72 +92,6 @@ class fragment_single_post : Fragment(R.layout.fragment_single_post) {
 
         }
 
-//        viewModel.data.observe(viewLifecycleOwner) { posts ->
-//            posts.map { post ->
-//                if (post.id == id) {
-//                    singlePost = post
-//                }
-//                adapter.submitList(posts)
-//                singlePost?.id?.let { id -> viewModel. }
-//
-//
-//
-//            }
-//
-//            singlePost?.id
-//            if (it.id == 0L) {
-//                return@observe
-//            }
-//        }
-
-//            fun bind(post: Post) {
-//                with(binding) {
-//                    author.text = singlePost?.author
-//                    published.text = singlePost?.published
-//                    content.text = singlePost?.content
-//                    countVisio.text = singlePost?.let { it -> Utils.numbers(it.countVisio) }
-//                    like.isChecked = singlePost?.likedByMe == true
-//                    like.text = post.likes.toString()
-//                    share.text = post.countShare.toString()
-//
-//                    if (post.video == null) {
-//                        video.visibility = View.GONE
-//                    } else {
-//                        video.visibility = View.VISIBLE
-//                    }
-//
-//                    menu.setOnClickListener {
-//                        PopupMenu(it.context, it).apply {
-//                            inflate(R.menu.posts_menu)
-//                            setOnMenuItemClickListener { item ->
-//                                when (item.itemId) {
-//                                    R.id.remove -> {
-//                                        singlePost?.id?.let { id -> viewModel.removeById(id) }
-//                                        true
-//                                    }
-//                                    R.id.edit -> {
-//                                        singlePost?.let { it -> viewModel.edit(it) }
-//                                        bundle.putString("content", singlePost?.content)
-//
-//                                        findNavController().navigate(R.id.action_feedFragment_to_fragment_single_post)
-//                                        bundle
-//                                        true
-//                                    }
-//                                    else -> false
-//                                }
-//                            }
-//                            show()
-//                        }
-//                    }
-//                    share.setOnClickListener {
-//                        singlePost?.countShare?.let { it ->
-//                            Utils.numbers(it)
-//                        }
-//                    }
-//
-//
-//                }
-//            }
 
 
         }

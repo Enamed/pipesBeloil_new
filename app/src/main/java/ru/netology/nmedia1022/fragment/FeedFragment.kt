@@ -59,7 +59,7 @@ class FeedFragment : Fragment(R.layout.feed) {
                         putExtra(Intent.EXTRA_TEXT, post.content)
                         type = "text/plain"
                     }
-                    val shareIntent = Intent.createChooser(intent, getString(R.string.share))
+                   // val shareIntent = Intent.createChooser(intent, getString(R.string.share))
                     startActivity(intent)
                 }
 
