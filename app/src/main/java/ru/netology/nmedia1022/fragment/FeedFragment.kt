@@ -16,6 +16,7 @@ import ru.netology.nmedia1022.adapter.PostActionListener
 import ru.netology.nmedia1022.adapter.PostsAdapter
 import ru.netology.nmedia1022.databinding.FeedBinding
 import ru.netology.nmedia1022.dto.Post
+import ru.netology.nmedia1022.fragment.fragment_single_post.Companion.textArg
 import ru.netology.nmedia1022.viewmodel.PostViewModel
 import ru.netology.nmedia1022.fragment.fragment_single_post as fragment_single_post1
 
@@ -70,7 +71,9 @@ class FeedFragment : Fragment(R.layout.feed) {
                 override fun onPost(post: Post) {
                     val id = post.id
                     bundle.putLong("id", id)
-                    findNavController().navigate(R.id.fragment_single_post)
+                    findNavController().navigate(R.id.fragment_single_post, Bundle().apply {
+                        textArg = post.id.toString()
+                    })
 
                 }
 
@@ -95,10 +98,7 @@ class FeedFragment : Fragment(R.layout.feed) {
             //newPostLauncher.launch()
         }
 
-        binding.fab.setOnClickListener {
-            findNavController().navigate(R.id.to_newPostFragment)
-            //newPostLauncher.launch()
-        }
+
 
 //            val editPostLauncher = registerForActivityResult(EditPostResultContract()) { text ->
 //                text ?: return@registerForActivityResult

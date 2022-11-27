@@ -44,7 +44,7 @@ class NewPostFragment : Fragment(R.layout.new_post) {
             AndroidUtils.hideKeyboard(binding.root)
 
 
-            findNavController().navigate(R.id.feedFragment)
+            findNavController().navigateUp()
         }
 
 
