@@ -8,9 +8,9 @@ data class Post (
     val likedByMe: Boolean = false,
     val share: Boolean = false,
 //    var countLike: Long,
-    var countShare: Long,
+    val countShare: Long,
     val countVisio: Long,
-    val likes:Int,
+    val likes:Long,
     val video: String? = null
 
 )

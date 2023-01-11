@@ -29,17 +29,13 @@ class PostViewHolder(
             countVisio.text = Utils.numbers(post.countVisio)
             like.isChecked = post.likedByMe
 
+// INT or STRING??????
+//            like.text = post.likes.toString()
 
-            like.text = post.likes.toString()
-
-            // like.text = Utils.numbers(post.likes)
+            like.text = Utils.numbers(post.likes)
 
             share.text = post.countShare.toString()
-            // visio.text = post.countVisio.toString()
 
-//            (
-//            if (post.likedByMe) R.drawable.ic_liked_24 else R.drawable.ic_baseline_favorite_border_24
-//        )
             like.setOnClickListener {
                 listener.like(post)
             }

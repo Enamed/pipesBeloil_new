@@ -1,5 +1,6 @@
 package ru.netology.nmedia1022.repository
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import ru.netology.nmedia1022.dto.Post
 
 interface PostRepository {
@@ -10,4 +11,7 @@ interface PostRepository {
     //delete post
     fun removeById(id: Long)
   //  fun closeEdit(id: Long)
+
+
+
 }
