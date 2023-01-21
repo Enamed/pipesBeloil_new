@@ -1,29 +1,21 @@
 package ru.netology.nmedia1022.fragment
 
-import android.content.Context
 import android.content.Intent
-import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
-import android.widget.PopupMenu
+import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.MutableLiveData
 import androidx.navigation.fragment.findNavController
-import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
-import kotlinx.android.synthetic.main.fragment_single_post.*
 import ru.netology.nmedia1022.R
 import ru.netology.nmedia1022.adapter.PostActionListener
 import ru.netology.nmedia1022.adapter.PostViewHolder
-import ru.netology.nmedia1022.adapter.PostsAdapter
-import ru.netology.nmedia1022.databinding.ActivityAppBinding.bind
 import ru.netology.nmedia1022.databinding.FragmentSinglePostBinding
 import ru.netology.nmedia1022.dto.Post
-import ru.netology.nmedia1022.fragment.NewPostFragment.Companion.textArg
+
 import ru.netology.nmedia1022.utils.StringArg
-import ru.netology.nmedia1022.utils.Utils
+
 import ru.netology.nmedia1022.viewmodel.PostViewModel
 
 class fragment_single_post : Fragment(R.layout.fragment_single_post) {
@@ -32,15 +24,19 @@ class fragment_single_post : Fragment(R.layout.fragment_single_post) {
         var Bundle.textArg by StringArg
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        val binding = FragmentSinglePostBinding.bind(view)
-        val bundle = Bundle()
-        val viewModel: PostViewModel by viewModels(
-            ownerProducer = ::requireParentFragment
-        )
+         override fun onCreateView(
+            inflater: LayoutInflater,
+            container: ViewGroup?,
+            savedInstanceState: Bundle?
+        ): View? {
+         val viewModel: PostViewModel by viewModels(
+                ownerProducer = ::requireParentFragment
+            )
 
-      //  val id = arguments?.getLong("id")
+            val bundle = Bundle()
+
+             val binding = FragmentSinglePostBinding.inflate(inflater, container, false)
+            //  val id = arguments?.getLong("id")
        // var singlePost: Post? = null
 
         val postViewHolder = PostViewHolder(binding.post, object : PostActionListener {
@@ -89,7 +85,7 @@ class fragment_single_post : Fragment(R.layout.fragment_single_post) {
             }
           postViewHolder.bind(post)
         }
-
+return binding.root
         }
 
 

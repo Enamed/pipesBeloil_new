@@ -1,74 +1,44 @@
 package ru.netology.nmedia1022.repository
 
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.map
 import ru.netology.nmedia1022.dao.PostDao
 import ru.netology.nmedia1022.dto.Post
+import ru.netology.nmedia1022.entity.PostEntity
 
 class PostRepositorySQLiteImpl(
     private val dao: PostDao
     ) : PostRepository {
-    private var posts = emptyList<Post>()
 
-    private val data = MutableLiveData<List<Post>>(emptyList<Post>())
 
-    init {
-//        data.value = dao.getAll()
-        posts = dao.getAll()
-        data.value = posts
+
+
+
+    override fun getALL(): LiveData<List<Post>> = dao.getAll()
+        .map{
+        it.map (PostEntity::toDto)
     }
-
-    override fun getALL(): LiveData<List<Post>> = data
 
     override fun likeById(id: Long) {
 
         dao.likeById(id)
-        posts = posts.map {
-            if (it.id != id) it else it.copy(
-                likedByMe = !it.likedByMe,
-                likes = if (it.likedByMe) it.likes - 1 else it.likes + 1
 
-            )
-        }
-        data.value = posts
 
     }
 
     override fun share(id: Long) {
-        dao.share(id)
-        posts = posts.map { post ->
-            if (post.id == id) post.copy(countShare = post.countShare + 1)
-            else post
-        }
-        data.value = posts
-///GOSHKO
-//        dao.share(id)(
-//            """
-//           UPDATE posts SET
-//               shared = shared + 1
-//           WHERE id = ?;
-//        """.trimIndent(), arrayOf(id)
-//        )
+dao.share(id)
+
     }
 
     override fun removeById(id: Long) {
         dao.removeById(id)
-        posts = posts.filter { it.id != id }
-        data.value = posts
+
+
     }
 
     override fun save(post: Post) {
-        val id = post.id
-        val saved = dao.save(post)
-//                val posts = data.value
-        posts = if (id == 0L) {
-            listOf(saved) + posts
-        } else {
-            posts.map {
-                if (it.id != id) it else saved
-            }
-        }
-        data.value = posts
+dao.insert(PostEntity.fromDto(post))
     }
 }
 

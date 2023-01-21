@@ -1,33 +1,32 @@
 package ru.netology.nmedia1022.fragment
 
-
-import android.app.Activity
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
-
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import kotlinx.android.synthetic.main.new_post.*
 import ru.netology.nmedia1022.R
 import ru.netology.nmedia1022.databinding.NewPostBinding
 import ru.netology.nmedia1022.utils.AndroidUtils
-import ru.netology.nmedia1022.utils.StringArg
 import ru.netology.nmedia1022.viewmodel.PostViewModel
 
 
 class NewPostFragment : Fragment(R.layout.new_post) {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        val binding = NewPostBinding.bind(view)
-        ///val viewModel: PostViewModel by viewModels()
+        val binding = NewPostBinding.inflate(inflater, container, false)
+//
+//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+//        val binding = NewPostBinding.bind(view)
+//        ///val viewModel: PostViewModel by viewModels()
 
-//предоставляем одну viewModel для нескольких фрагментов
+////предоставляем одну viewModel для нескольких фрагментов
         val viewModel: PostViewModel by viewModels(
             ownerProducer = ::requireParentFragment
         )
@@ -47,11 +46,11 @@ class NewPostFragment : Fragment(R.layout.new_post) {
             findNavController().navigateUp()
         }
 
-
+return binding.root
     }
 
     companion object {
-        private const val TEXT_KEY = "text"
+        private const val TEXT_KEY = "content"
 
         var Bundle.textArg: String?
             set(value) = putString(TEXT_KEY, value)

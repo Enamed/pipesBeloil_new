@@ -4,7 +4,9 @@ package ru.netology.nmedia1022.fragment
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
@@ -20,16 +22,30 @@ import ru.netology.nmedia1022.viewmodel.PostViewModel
 
 class FeedFragment : Fragment(R.layout.feed) {
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        val binding = FeedBinding.bind(view)
+//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+//        super.onCreate(savedInstanceState)
+//        val binding = FeedBinding.bind(view)
+//
+//
+////предоставляем одну viewModel для нескольких фрагментов
+//        val viewModel: PostViewModel by viewModels(
+//            ownerProducer = ::requireParentFragment
+//        )
+//        val bundle = Bundle()
 
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        val binding = FeedBinding.inflate(inflater, container, false)
 
-//предоставляем одну viewModel для нескольких фрагментов
         val viewModel: PostViewModel by viewModels(
             ownerProducer = ::requireParentFragment
         )
+
         val bundle = Bundle()
+
 
         val adapter = PostsAdapter(
             object : PostActionListener {
@@ -82,12 +98,23 @@ class FeedFragment : Fragment(R.layout.feed) {
             adapter.submitList(posts)
         }
 
+        viewModel.edited.observe(viewLifecycleOwner) {
+            if (it.id == 0L) {
+                return@observe
+            }
 
-        binding.fab.setOnClickListener {
+            findNavController().navigate(R.id.to_newPostFragment, Bundle().apply {
+                putString("content", it.content)})
+        }
+
+
+    binding.fab.setOnClickListener {
             findNavController().navigate(R.id.to_newPostFragment)
         }
 
+        return binding.root
     }
+
 }
 
 
