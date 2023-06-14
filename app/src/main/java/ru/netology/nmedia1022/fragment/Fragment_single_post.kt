@@ -18,7 +18,7 @@ import ru.netology.nmedia1022.utils.StringArg
 
 import ru.netology.nmedia1022.viewmodel.PostViewModel
 
-class fragment_single_post : Fragment(R.layout.fragment_single_post) {
+class Fragment_single_post : Fragment(R.layout.fragment_single_post) {
 
     companion object {
         var Bundle.textArg by StringArg
@@ -40,11 +40,11 @@ class fragment_single_post : Fragment(R.layout.fragment_single_post) {
        // var singlePost: Post? = null
 
         val postViewHolder = PostViewHolder(binding.post, object : PostActionListener {
+
             override fun edit(post: Post) {
                     viewModel.edit(post)
                     bundle.putString("content", post.content)
                     findNavController().navigate(R.id.newPostFragment, bundle)
-
             }
 
             override fun like(post: Post) {
@@ -56,7 +56,7 @@ class fragment_single_post : Fragment(R.layout.fragment_single_post) {
             }
 
             override fun share(post: Post) {
-                viewModel.share(post.id)
+//                     viewModel.share(post.id)
                     //создание интента для шаринга
                     val intent = Intent().apply {
                         action = Intent.ACTION_SEND
@@ -65,12 +65,13 @@ class fragment_single_post : Fragment(R.layout.fragment_single_post) {
                     }
                  //   val shareIntent = Intent.createChooser(intent, getString(R.string.share))
                     startActivity(intent)
+
             }
 
             override fun onPost(post: Post) {
-                    val id = post.id
-                    bundle.putLong("id", id)
-                    findNavController().navigate(R.id.fragment_single_post)
+//                val id = post.id
+//                    bundle.putLong("id", id)
+//                    findNavController().navigate(R.id.fragment_single_post)
             }
         })
 
@@ -79,11 +80,11 @@ class fragment_single_post : Fragment(R.layout.fragment_single_post) {
 //выводит карточку
         viewModel.data.observe(viewLifecycleOwner) { posts ->
             val id = arguments?.textArg?.toLong()
-            val post = posts.find { it.id == id } ?: kotlin.run {
-                findNavController().navigateUp()
-                return@observe
-            }
-          postViewHolder.bind(post)
+//            val post = posts.find { it.id == id } ?: kotlin.run {
+//                findNavController().navigateUp()
+//                return@observe
+//            }
+//          postViewHolder.bind(post)
         }
 return binding.root
         }

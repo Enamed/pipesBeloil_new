@@ -13,7 +13,7 @@ import com.google.gson.Gson
 import ru.netology.nmedia1022.R
 import kotlin.random.Random
 
-
+// FCM - Уведомление через FireBase о наличии новых лайков или постов
 class FCMService : FirebaseMessagingService() {
     private val action = "action"
     private val content = "content"
