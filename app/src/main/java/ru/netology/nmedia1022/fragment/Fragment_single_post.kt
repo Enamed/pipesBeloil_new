@@ -44,11 +44,11 @@ class Fragment_single_post : Fragment(R.layout.fragment_single_post) {
             override fun edit(post: Post) {
                     viewModel.edit(post)
                     bundle.putString("content", post.content)
-                    findNavController().navigate(R.id.newPostFragment, bundle)
+                 //   findNavController().navigate(R.id.newPostFragment, bundle)
             }
 
             override fun like(post: Post) {
-                viewModel.likeById(post.id)
+//                viewModel.likeById(post.id, post.likedByMe)
             }
 
             override fun delete(post: Post) {

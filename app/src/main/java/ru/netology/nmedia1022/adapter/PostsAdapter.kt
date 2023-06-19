@@ -20,8 +20,8 @@ class PostViewHolder(
 ) : RecyclerView.ViewHolder(binding.root) {
     fun bind(post: Post) {
         with(binding) {
-            author.text = post.author
-            published.text = post.published
+            //author.text = post.author
+         //   published.text = post.published
             content.text = post.content
 
             //    countLike.text = Utils.numbers(post.countLike)

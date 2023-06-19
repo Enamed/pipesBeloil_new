@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.MainFragment">
+
+
+    <ImageView
+        android:id="@+id/imgNktGl"
+        android:layout_width="66dp"
+        android:layout_height="69dp"
+        android:src="@drawable/bt1"
+        app:layout_constraintEnd_toStartOf="@+id/imgNktVis"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imgNktVis" />
+
+    <ImageView
+        android:id="@+id/imgNktGl2"
+        android:layout_width="66dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/bt1"
+        app:layout_constraintEnd_toStartOf="@+id/imgNktGl3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/polosaNkt2" />
+
+    <ImageView
+        android:id="@+id/imgNktGl3"
+        android:layout_width="66dp"
+        android:layout_height="69dp"
+        android:src="@drawable/bt1"
+        app:layout_constraintEnd_toStartOf="@+id/imgNktGl4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imgNktGl2"
+        app:layout_constraintTop_toTopOf="@+id/imgNktGl2" />
+
+    <ImageView
+        android:id="@+id/imgNktGl4"
+        android:layout_width="66dp"
+        android:layout_height="69dp"
+        android:src="@drawable/bt1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imgNktGl3"
+        app:layout_constraintTop_toTopOf="@+id/imgNktGl3" />
+
+    <ImageView
+        android:id="@+id/imgNktVis"
+        android:layout_width="66dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/bt1"
+        app:layout_constraintEnd_toStartOf="@+id/imgNktPlastic"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imgNktGl"
+        app:layout_constraintTop_toBottomOf="@+id/polosaNkt" />
+
+    <ImageView
+        android:id="@+id/imgNktPlastic"
+        android:layout_width="66dp"
+        android:layout_height="69dp"
+        android:src="@drawable/bt1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imgNktVis"
+        app:layout_constraintTop_toTopOf="@+id/imgNktVis" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="53dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/logo" />
+
+    <TextView
+        android:id="@+id/footer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#00A544"
+        android:fontFamily="sans-serif-condensed"
+        android:text="ПУ &quot;Нефтебурсервис&quot;"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/preambula"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="78dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="serif"
+        android:singleLine="false"
+        android:text="СПРАВОЧНИК\nТРУБ НЕФТЯНОГО СОРТАМЕНТА\nРУП &quot;ПРОИЗВОДСТВЕННОЕ ОБЬЕДИНЕНИЕ &quot;БЕЛОРУСНЕФТЬ&quot;"
+        app:layout_constraintBottom_toBottomOf="@+id/logo"
+        app:layout_constraintStart_toEndOf="@+id/logo"
+        app:layout_constraintTop_toTopOf="@+id/logo" />
+
+    <TextView
+        android:id="@+id/disclaimer"
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="6dp"
+        android:background="@drawable/rounded"
+        android:clickable="true"
+        android:elegantTextHeight="true"
+        android:enabled="true"
+        android:fadeScrollbars="false"
+        android:filterTouchesWhenObscured="false"
+        android:fitsSystemWindows="false"
+        android:focusableInTouchMode="false"
+        android:rotationY="0"
+        android:singleLine="false"
+        android:text="Отказ от ответственности"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textIsSelectable="false"
+        android:textStyle="bold"
+        app:autoSizeTextType="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/preambula" />
+
+    <ImageView
+        android:id="@+id/disclaimer_pic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_warning_24"
+        app:layout_constraintBottom_toBottomOf="@+id/disclaimer"
+        app:layout_constraintStart_toStartOf="@+id/logo"
+        app:layout_constraintTop_toTopOf="@+id/disclaimer" />
+
+    <ImageView
+        android:id="@+id/imgBt"
+        android:layout_width="66dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/bt1"
+        app:layout_constraintEnd_toStartOf="@+id/imgUbt"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/polosaBt" />
+
+    <ImageView
+        android:id="@+id/imgVbt"
+        android:layout_width="66dp"
+        android:layout_height="69dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/bt1"
+        app:layout_constraintBottom_toBottomOf="@+id/imgTbt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imgTbt"
+        app:layout_constraintTop_toTopOf="@+id/imgTbt" />
+
+    <ImageView
+        android:id="@+id/imgNubt"
+        android:layout_width="66dp"
+        android:layout_height="69dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/bt1"
+        app:layout_constraintBottom_toBottomOf="@+id/imgUbt"
+        app:layout_constraintEnd_toStartOf="@+id/imgTbt"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imgUbt"
+        app:layout_constraintTop_toTopOf="@+id/imgUbt" />
+
+    <ImageView
+        android:id="@+id/imgTbt"
+        android:layout_width="66dp"
+        android:layout_height="69dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/bt1"
+        app:layout_constraintBottom_toBottomOf="@+id/imgNubt"
+        app:layout_constraintEnd_toStartOf="@+id/imgVbt"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imgNubt"
+        app:layout_constraintTop_toTopOf="@+id/imgNubt" />
+
+    <ImageView
+        android:id="@+id/imgUbt"
+        android:layout_width="66dp"
+        android:layout_height="69dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/bt1"
+        app:layout_constraintBottom_toBottomOf="@+id/imgBt"
+        app:layout_constraintEnd_toStartOf="@+id/imgNubt"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imgBt"
+        app:layout_constraintTop_toTopOf="@+id/imgBt" />
+
+    <TextView
+        android:id="@+id/polosaBt"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:background="#00A544"
+        android:text="Бурильные трубы"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/disclaimer"
+        tools:layout_editor_absoluteX="78dp" />
+
+    <TextView
+        android:id="@+id/polosaNkt"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:background="#00A544"
+        android:text="Насосно-компрессорные трубы"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/txtBT"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/polosaNkt2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:background="#00A544"
+        android:text="Обсадные трубы"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/txtNktGl"
+        tools:layout_editor_absoluteX="-85dp" />
+
+    <TextView
+        android:id="@+id/txtBT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="БТ"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/imgBt"
+        app:layout_constraintStart_toStartOf="@+id/imgBt"
+        app:layout_constraintTop_toBottomOf="@+id/imgBt" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top" />
+
+    <TextView
+        android:id="@+id/txtUbt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="УБТ"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/imgNubt"
+        app:layout_constraintStart_toStartOf="@+id/imgUbt"
+        app:layout_constraintTop_toBottomOf="@+id/imgUbt" />
+
+    <TextView
+        android:id="@+id/txtNubt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="НУБТ"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/imgNubt"
+        app:layout_constraintStart_toStartOf="@+id/imgNubt"
+        app:layout_constraintTop_toBottomOf="@+id/imgNubt" />
+
+    <TextView
+        android:id="@+id/txtTbt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ТБТ"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/imgTbt"
+        app:layout_constraintStart_toStartOf="@+id/imgTbt"
+        app:layout_constraintTop_toBottomOf="@+id/imgTbt" />
+
+    <TextView
+        android:id="@+id/txtVbt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ВБТ"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/imgVbt"
+        app:layout_constraintStart_toStartOf="@+id/imgVbt"
+        app:layout_constraintTop_toBottomOf="@+id/imgVbt" />
+
+    <TextView
+        android:id="@+id/txtNktGl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="НКТ \nгладкая"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/txtNktVis"
+        app:layout_constraintEnd_toEndOf="@+id/imgNktGl"
+        app:layout_constraintStart_toStartOf="@+id/imgNktGl"
+        app:layout_constraintTop_toBottomOf="@+id/imgNktGl" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top" />
+
+    <TextView
+        android:id="@+id/txtNktVis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="НКТ \n высаженная"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/txtNktplast"
+        app:layout_constraintEnd_toEndOf="@+id/imgNktVis"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toStartOf="@+id/imgNktVis"
+        app:layout_constraintTop_toBottomOf="@+id/imgNktVis"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/txtNktplast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="НКТ \n пластиковая"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/imgNktPlastic"
+        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintStart_toStartOf="@+id/imgNktPlastic"
+        app:layout_constraintTop_toBottomOf="@+id/imgNktPlastic" />
+
+    <TextView
+        android:id="@+id/txtOttm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OTTM"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/imgNktGl2"
+        app:layout_constraintStart_toStartOf="@+id/imgNktGl2"
+        app:layout_constraintTop_toBottomOf="@+id/imgNktGl2" />
+
+    <TextView
+        android:id="@+id/txtButtress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BUTTRESS"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/imgNktGl3"
+        app:layout_constraintStart_toStartOf="@+id/imgNktGl3"
+        app:layout_constraintTop_toBottomOf="@+id/imgNktGl3" />
+
+    <TextView
+        android:id="@+id/txtPremium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Premium"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/imgNktGl4"
+        app:layout_constraintStart_toStartOf="@+id/imgNktGl4"
+        app:layout_constraintTop_toBottomOf="@+id/imgNktGl4" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--    android:layout_marginStart="16dp"-->
+    <!--    android:layout_marginTop="8dp"-->
+    <!--    android:layout_marginEnd="16dp"-->
+
+
+
