@@ -57,7 +57,7 @@ class FCMService : FirebaseMessagingService() {
     @SuppressLint("MissingPermission")
     private fun handleLike(content: Like) {
         val notification = NotificationCompat.Builder(this, channelId)
-            .setSmallIcon(R.drawable.logo_foreground)
+            .setSmallIcon(R.drawable.logobeloil_foreground)
             .setContentTitle(
                 getString(
                     R.string.notification_user_liked,
@@ -76,7 +76,7 @@ class FCMService : FirebaseMessagingService() {
 @SuppressLint("MissingPermission")
 private fun handleNewPost(newPost: NewPost) {
     val notification = NotificationCompat.Builder(this, channelId)
-        .setSmallIcon(R.drawable.logo_foreground)
+        .setSmallIcon(R.drawable.logobeloil_foreground)
         .setContentTitle(
             getString(
                 R.string.notification_user_newpost,

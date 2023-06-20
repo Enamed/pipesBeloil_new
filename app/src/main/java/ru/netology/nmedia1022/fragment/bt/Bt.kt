@@ -59,12 +59,15 @@ class BtFragment: Fragment(R.layout.bt) {
 
         // binding.list.adapter = adapter
         //binding.list.animation = null   // отключаем анимацию
-        viewModel.data.observe(viewLifecycleOwner) { posts ->
-            adapter.submitList(posts)
-        }
+//        viewModel.data.observe(viewLifecycleOwner) { posts ->
+//            adapter.submitList(posts)
+//        }
 
         binding.imgBack.setOnClickListener {
             findNavController().navigate(R.id.mainFragment)
+        }
+        binding.buttonObsheoborot.setOnClickListener {
+            findNavController().navigate(R.id.btObFragment)
         }
 
 

@@ -29,39 +29,16 @@ class DisclaimerFragment: Fragment(R.layout.disclaimer) {
 
             val bundle = Bundle()
 
-            val adapter = PostsAdapter(
-                object : PostActionListener {
-                    override fun edit(post: Post) {
-                        TODO("Not yet implemented")
-                    }
 
-                    override fun like(post: Post) {
-                        TODO("Not yet implemented")
-                    }
-
-                    override fun delete(post: Post) {
-                        TODO("Not yet implemented")
-                    }
-
-                    override fun share(post: Post) {
-                        TODO("Not yet implemented")
-                    }
-
-                    override fun onPost(post: Post) {
-                        TODO("Not yet implemented")
-                    }
-
-                }
-            )
 
 
 
 
             // binding.list.adapter = adapter
             //binding.list.animation = null   // отключаем анимацию
-            viewModel.data.observe(viewLifecycleOwner) { posts ->
-                adapter.submitList(posts)
-            }
+//            viewModel.data.observe(viewLifecycleOwner) { posts ->
+//                adapter.submitList(posts)
+//            }
 
             binding.imgBack.setOnClickListener {
                 findNavController().navigate(R.id.mainFragment)

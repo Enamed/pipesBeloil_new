@@ -20,63 +20,62 @@ class PostViewHolder(
 ) : RecyclerView.ViewHolder(binding.root) {
     fun bind(post: Post) {
         with(binding) {
-            //author.text = post.author
-         //   published.text = post.published
-            content.text = post.content
-
-            //    countLike.text = Utils.numbers(post.countLike)
-            //      countShare.text = Utils.numbers(post.countShare)
-            countVisio.text = Utils.numbers(post.countVisio)
-            like.isChecked = post.likedByMe
-
-// INT or STRING??????
-//            like.text = post.likes.toString()
-
-            like.text = Utils.numbers(post.likes)
-
-            share.text = post.countShare.toString()
-
-            like.setOnClickListener {
-                listener.like(post)
-            }
-
-            video.setOnClickListener {
-                listener.onVidioClicked(post)
-            }
-            content.setOnClickListener{
+            author.text = post.author
+//            published.text = post.published
+//            content.text = post.content
+//
+//            //    countLike.text = Utils.numbers(post.countLike)
+//            //      countShare.text = Utils.numbers(post.countShare)
+//            countVisio.text = Utils.numbers(post.countVisio)
+//            like.isChecked = post.likedByMe
+//
+//
+//
+//            like.text = Utils.numbers(post.likes)
+//
+//            share.text = post.countShare.toString()
+//
+//            like.setOnClickListener {
+//                listener.like(post)
+//            }
+//
+//            video.setOnClickListener {
+//                listener.onVidioClicked(post)
+//            }
+            author.setOnClickListener{
                 listener.onPost(post)
             }
 
-
-            if (post.video == null) {
-                video.visibility = View.GONE
-            } else {
-                video.visibility = View.VISIBLE
-            }
-
-
-            menu.setOnClickListener {
-                PopupMenu(it.context, it).apply {
-                    inflate(R.menu.posts_menu)
-                    setOnMenuItemClickListener { item ->
-                        when (item.itemId) {
-                            R.id.remove -> {
-                                listener.delete(post)
-                                true
-                            }
-                            R.id.edit -> {
-                                listener.edit(post)
-                                true
-                            }
-                            else -> false
-                        }
-                    }
-                    show()
-                }
-            }
-            share.setOnClickListener {
-                listener.share(post)
-            }
+//
+//            if (post.video == null) {
+//                video.visibility = View.GONE
+//            } else {
+//                video.visibility = View.VISIBLE
+//            }
+//
+//
+//            menu.setOnClickListener {
+//                PopupMenu(it.context, it).apply {
+//                    inflate(R.menu.posts_menu)
+//                    setOnMenuItemClickListener { item ->
+//                        when (item.itemId) {
+//                            R.id.remove -> {
+//                                listener.delete(post)
+//                                true
+//                            }
+//                            R.id.edit -> {
+//                                listener.edit(post)
+//                                true
+//                            }
+//                            else -> false
+//                        }
+//                    }
+//                    show()
+//                }
+//            }
+//            share.setOnClickListener {
+//                listener.share(post)
+//            }
 
 
         }

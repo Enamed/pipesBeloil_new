@@ -59,9 +59,9 @@ class MainFragment: Fragment(R.layout.main) {
 
        // binding.list.adapter = adapter
         //binding.list.animation = null   // отключаем анимацию
-        viewModel.data.observe(viewLifecycleOwner) { posts ->
-            adapter.submitList(posts)
-        }
+//        viewModel.data.observe(viewLifecycleOwner) { posts ->
+//            adapter.submitList(posts)
+//        }
 
 binding.disclaimer.setOnClickListener {
     findNavController().navigate(R.id.disclaimerFragment)
@@ -70,7 +70,13 @@ binding.disclaimer.setOnClickListener {
         binding.imgBt.setOnClickListener {
             findNavController().navigate(R.id.btFragment)
         }
+        binding.logo.setOnClickListener {
+            findNavController().navigate(R.id.btCard)
+        }
 
+        binding.preambula.setOnClickListener {
+            findNavController().navigate(R.id.feedFragment)
+        }
         return binding.root
     }
 }
