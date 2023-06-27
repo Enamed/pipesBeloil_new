@@ -16,6 +16,7 @@ import com.google.android.material.snackbar.Snackbar
 import ru.netology.nmedia1022.R
 
 import ru.netology.nmedia1022.adapter.PostActionListener
+
 import ru.netology.nmedia1022.adapter.PostsAdapter
 import ru.netology.nmedia1022.databinding.FeedBinding
 import ru.netology.nmedia1022.dto.Post
@@ -52,7 +53,7 @@ class FeedFragment : Fragment(R.layout.feed) {
         val bundle = Bundle()
 
         val adapter = PostsAdapter(
-            object : PostActionListener {
+            object : PostActionListener{
 
                 override fun like(post: Post) {
                     viewModel.likeById(post.id)
@@ -132,14 +133,14 @@ class FeedFragment : Fragment(R.layout.feed) {
 
         }
 
-        viewModel.edited.observe(viewLifecycleOwner) {
-            if (it.id == 0L) {
-                return@observe
-            }
-
-            findNavController().navigate(R.id.to_newPostFragment, Bundle().apply {
-                putString("content", it.content)})
-        }
+//        viewModel.edited.observe(viewLifecycleOwner) {
+//            if (it.id == 0L) {
+//                return@observe
+//            }
+//
+//            findNavController().navigate(R.id.to_newPostFragment, Bundle().apply {
+//                putString("content", it.content)})
+//        }
 
 
 
@@ -148,9 +149,9 @@ class FeedFragment : Fragment(R.layout.feed) {
             viewModel.refreshPosts()
         }
 
-        binding.fab.setOnClickListener {
-            findNavController().navigate(R.id.to_newPostFragment)
-        }
+//        binding.fab.setOnClickListener {
+//            findNavController().navigate(R.id.to_newPostFragment)
+//        }
 
         return binding.root
     }

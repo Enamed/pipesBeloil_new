@@ -7,6 +7,7 @@ import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.RequestBody.Companion.toRequestBody
 import ru.netology.nmedia1022.dto.Post
+import ru.netology.nmedia1022.dto.PostList
 
 import java.util.concurrent.TimeUnit
 
@@ -25,6 +26,18 @@ class PostRepositoryImpl: PostRepository {
     }
 
     override fun getALL(): List<Post> {
+        val request: Request = Request.Builder()
+            .url("${BASE_URL}/api/posts")
+            .build()
+
+        return client.newCall(request)
+            .execute()
+            .let { it.body?.string() ?: throw RuntimeException("body is null") }
+            .let {
+                gson.fromJson(it, typeToken.type)
+            }
+    }
+    override fun getList(): List<PostList> {
         val request: Request = Request.Builder()
             .url("${BASE_URL}/api/posts")
             .build()

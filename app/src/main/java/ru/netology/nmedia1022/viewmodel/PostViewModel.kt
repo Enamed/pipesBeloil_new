@@ -5,7 +5,6 @@ import android.app.Application
 import androidx.lifecycle.*
 import kotlinx.coroutines.launch
 import ru.netology.nmedia1022.dto.Post
-import ru.netology.nmedia1022.model.FeedModelState
 
 
 import ru.netology.nmedia1022.repository.*
@@ -21,7 +20,22 @@ private val empty = Post(
     likes = 0,
     published = "",
     countShare = 0,
-    countVisio = 0
+    countVisio = 0,
+    naimenovanie = "",
+    diametrTrub = "127",
+    vnDimetrTrub = "51",
+    thick = "9",
+    ieu = "IEU",
+    rastiagUsilie = "12",
+    krutMoment = "12",
+    vnDavlenie = "12",
+    tipZamka = "ЗП-168",
+    narDiametrZamka = "168",
+    vnDiametrZamka = "51",
+    pin = "З-133",
+    rastiagUsilieZamka = "122",
+    krutMomentZamka = "234",
+    g105 = "S-135"
 )
 
 class PostViewModel(application: Application) : AndroidViewModel(application) {
@@ -56,6 +70,7 @@ class PostViewModel(application: Application) : AndroidViewModel(application) {
             try {
                 // Данные успешно получены
                 val posts = repository.getALL()
+                val postslist = repository.getALL()
                 FeedModel(posts = posts, empty = posts.isEmpty())
             } catch (e: IOException) {
                 // Получена ошибка
