@@ -1,6 +1,6 @@
 package ru.netology.nmedia1022.fragment.bt
 
-import android.content.Intent
+
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -70,6 +70,9 @@ class BtFragment: Fragment(R.layout.bt) {
 //            adapter.submitList(posts)
 //        }
 
+        binding.imgBack.setOnClickListener {
+            findNavController().navigate(R.id.mainFragment)
+        }
         binding.imgBack.setOnClickListener {
             findNavController().navigate(R.id.mainFragment)
         }
