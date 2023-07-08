@@ -29,6 +29,7 @@ data class Post(
     val krutMomentZamka: String,
     val g105: String,
     val priznak: String
+    //dsfsdfdagadfgadfgadgdfga
 
 
 
