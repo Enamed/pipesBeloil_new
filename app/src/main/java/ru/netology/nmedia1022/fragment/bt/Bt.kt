@@ -21,12 +21,12 @@ class BtFragment: Fragment(R.layout.bt) {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         val binding = BtBinding.inflate(inflater, container, false)
 
-        val viewModel: PostViewModel by viewModels(
-            ownerProducer = ::requireParentFragment
-        )
+//        val viewModel: PostViewModel by viewModels(
+//            ownerProducer = ::requireParentFragment
+//        )
 
 
         val bundle = Bundle()
@@ -38,30 +38,30 @@ class BtFragment: Fragment(R.layout.bt) {
 
         // val photo = intent.getSerializableExtra("photo") as? Photo // если нет значения с таким ключом, то photo == null
 
-        val adapter = PostsAdapter(
-            object : PostActionListener {
-                override fun edit(post: Post) {
-                    TODO("Not yet implemented")
-                }
-
-                override fun like(post: Post) {
-                    TODO("Not yet implemented")
-                }
-
-                override fun delete(post: Post) {
-                    TODO("Not yet implemented")
-                }
-
-                override fun share(post: Post) {
-                    TODO("Not yet implemented")
-                }
-
-                override fun onPost(post: Post) {
-                    TODO("Not yet implemented")
-                }
-
-            }
-        )
+//        val adapter = PostsAdapter(
+//            object : PostActionListener {
+//                override fun edit(post: Post) {
+//                    TODO("Not yet implemented")
+//                }
+//
+//                override fun like(post: Post) {
+//                    TODO("Not yet implemented")
+//                }
+//
+//                override fun delete(post: Post) {
+//                    TODO("Not yet implemented")
+//                }
+//
+//                override fun share(post: Post) {
+//                    TODO("Not yet implemented")
+//                }
+//
+//                override fun onPost(post: Post) {
+//                    TODO("Not yet implemented")
+//                }
+//
+//            }
+//        )
 
 
         // binding.list.adapter = adapter
@@ -73,9 +73,7 @@ class BtFragment: Fragment(R.layout.bt) {
         binding.imgBack.setOnClickListener {
             findNavController().navigate(R.id.mainFragment)
         }
-        binding.imgBack.setOnClickListener {
-            findNavController().navigate(R.id.mainFragment)
-        }
+
 //        binding.buttonObsheoborot.setOnClickListener {
 //            findNavController().navigate(R.id.btObFragment)
 //
