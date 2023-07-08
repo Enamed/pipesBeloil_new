@@ -6,15 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import ru.netology.nmedia1022.R
-import ru.netology.nmedia1022.adapter.PostActionListener
-import ru.netology.nmedia1022.adapter.PostsAdapter
 import ru.netology.nmedia1022.databinding.BtBinding
-import ru.netology.nmedia1022.dto.Post
 import ru.netology.nmedia1022.utils.CompanionArg.Companion.textArg
-import ru.netology.nmedia1022.viewmodel.PostViewModel
+
 
 class BtFragment: Fragment(R.layout.bt) {
     override fun onCreateView(
@@ -80,7 +76,7 @@ class BtFragment: Fragment(R.layout.bt) {
 //
 //        }
         binding.buttonObsheoborot.setOnClickListener {
-            val ids: String = "BT"
+            val ids = "BT"
             bundle.putString("BT", ids)
             findNavController().navigate(R.id.btObFragment, Bundle().apply {
                 textArg = "BT"

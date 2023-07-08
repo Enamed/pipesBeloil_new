@@ -2,11 +2,11 @@ package ru.netology.nmedia1022.repository
 
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import okhttp3.MediaType.Companion.toMediaType
+
 import okhttp3.OkHttpClient
 import okhttp3.Request
-import okhttp3.RequestBody.Companion.toRequestBody
 import ru.netology.nmedia1022.dto.Post
+import ru.netology.nmedia1022.dto.PostList
 
 import java.util.concurrent.TimeUnit
 
@@ -21,7 +21,7 @@ class PostRepositoryImpl: PostRepository {
     companion object {
    //     private const val BASE_URL = "http://10.0.2.2:9999"
      private const val BASE_URL = "http://goshko.by:9999"
-        private val jsonType = "application/json".toMediaType()
+        //private val jsonType = "application/json".toMediaType()
     }
 
     override fun getALL(): List<Post> {
@@ -35,6 +35,10 @@ class PostRepositoryImpl: PostRepository {
             .let {
                 gson.fromJson(it, typeToken.type)
             }
+    }
+
+    override fun getList(): List<PostList> {
+        TODO("Not yet implemented")
     }
 
     override fun likeById(id: Long) {
