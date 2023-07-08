@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:orientation="vertical"
+    tools:context=".fragment.bt.BtOb">
+
+<!--    <TextView-->
+<!--        android:id="@+id/texttrub"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:textAppearance="?android:attr/textAppearanceLarge" />-->
+<!--        <Button-->
+<!--            android:id="@+id/texttrub"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Button"-->
+
+<!--           />-->
+
+
+        <Button
+            android:id="@+id/texttrub"
+            style="@style/MenuButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Комплекты СУБР"
+            android:textColor="#383636"
+            app:icon="@drawable/baseline_arrow_right_alt_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:rippleColor="#8000B634" />
+</LinearLayout>
