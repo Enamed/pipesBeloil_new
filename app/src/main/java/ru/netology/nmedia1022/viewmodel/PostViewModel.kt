@@ -7,7 +7,6 @@ import ru.netology.nmedia1022.dto.Post
 
 
 import ru.netology.nmedia1022.repository.*
-import ru.netology.nmedia1022.utils.SingleLiveEvent
 import java.io.IOException
 import kotlin.concurrent.thread
 
@@ -94,6 +93,7 @@ class PostViewModel(application: Application) : AndroidViewModel(application) {
 //        }
 //    }
 
+//    OLOLOL
 //    fun save() {
 //        edited.value?.let {
 //            thread {
