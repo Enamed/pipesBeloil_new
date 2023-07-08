@@ -7,11 +7,11 @@ import kotlin.reflect.KProperty
 class CompanionArg {
 
     companion object{
-        var Bundle.textArg : String? by StringArg
+        var Bundle.textArg : String? by TextArg
         var Bundle.longArg : Long by LongArg
     }
 
-    object StringArg : ReadWriteProperty<Bundle, String?> {
+    object TextArg : ReadWriteProperty<Bundle, String?> {
         override fun getValue(thisRef: Bundle, property: KProperty<*>): String? {
             return thisRef.getString(property.name)
         }

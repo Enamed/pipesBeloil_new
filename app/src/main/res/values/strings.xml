@@ -1,13 +1,7 @@
 <resources>
     <string name="app_name">Pipes Beloil</string>
-    <string name="hello">Привет мир!</string>
-    <string name="blank_content_error">Content is blank</string>
-    <string name="share">Share</string>
     <string name="channel_remote_description">Уведомление с удаленного сервера</string>
     <string name="channel_remote_name">Уведомленеи сервера</string>
     <string name="notification_user_liked">%1$s поставил like %2$s\`s post</string>
     <string name="notification_user_newpost">%1$s добавил новый %2$s\`s post</string>
-    <string name="chooser_share_post">Поделиться</string>
-    <string name="error_loading">Ошибка обновления</string>
-    <string name="retry_loading">Повторить загрузку</string>
 </resources>

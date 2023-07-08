@@ -12,7 +12,7 @@ import com.google.android.material.snackbar.BaseTransientBottomBar.LENGTH_INDEFI
 import com.google.android.material.snackbar.Snackbar
 import ru.netology.nmedia1022.R
 import ru.netology.nmedia1022.databinding.ActivityAppBinding
-import ru.netology.nmedia1022.fragment.NewPostFragment.Companion.textArg
+
 
 class AppActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

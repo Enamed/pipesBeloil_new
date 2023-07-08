@@ -1,10 +1,14 @@
 package ru.netology.nmedia1022.repository
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import ru.netology.nmedia1022.dto.Post
+import ru.netology.nmedia1022.dto.PostList
 
 interface PostRepository {
-    fun getALL(): LiveData<List<Post>>
-    fun likeById(id: Long): Post
+    fun getALL(): List<Post>
+    fun getList(): List<PostList>
+
+    fun likeById(id: Long)
     fun share(id: Long)
     fun save(post: Post)
     //delete post

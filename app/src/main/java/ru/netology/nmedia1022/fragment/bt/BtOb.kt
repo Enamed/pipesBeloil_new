@@ -1,26 +1,26 @@
 package ru.netology.nmedia1022.fragment.bt
 
-import android.content.Intent
-import android.net.Uri
+
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import com.google.android.material.snackbar.Snackbar
 import ru.netology.nmedia1022.R
-import ru.netology.nmedia1022.adapter.PostActionListener
-import ru.netology.nmedia1022.adapter.PostsAdapter
-import ru.netology.nmedia1022.databinding.BtBinding
+import ru.netology.nmedia1022.adapter.*
 import ru.netology.nmedia1022.databinding.BtObBinding
-import ru.netology.nmedia1022.databinding.DisclaimerBinding
 import ru.netology.nmedia1022.dto.Post
+import ru.netology.nmedia1022.utils.CompanionArg.Companion.longArg
+import ru.netology.nmedia1022.utils.CompanionArg.Companion.textArg
 import ru.netology.nmedia1022.viewmodel.PostViewModel
 
-class BtObFragment: Fragment(R.layout.bt_ob) {
+
+class BtOb: Fragment(R.layout.bt_ob) {
+
+    @SuppressLint("SuspiciousIndentation")
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -32,119 +32,82 @@ class BtObFragment: Fragment(R.layout.bt_ob) {
             ownerProducer = ::requireParentFragment
         )
 
-        val bundle = Bundle()
-        val adapter = PostsAdapter(
-            object : PostActionListener {
 
-                override fun like(post: Post) {
-                    viewModel.likeById(post.id)
+    val bundle = Bundle()
+
+
+        val adapter = ListAdapter(
+            object : ListActionListener {
+
+                override fun edit(post: Post) {
+                    TODO("Not yet implemented")
                 }
 
-                override fun share(post: Post) {
-//                    val intent = Intent().apply {
-//                        action = Intent.ACTION_SEND
-//                        putExtra(Intent.EXTRA_TEXT, post.content)
-//                        type = "text/plain"
-//                    }
-//                    val shareIntent = Intent.createChooser(intent, "Поделится")
-//                    startActivity(shareIntent)
-//                    viewModel.share(post.id)
-//                }
-
-                    val intent = Intent().apply {
-                        action = Intent.ACTION_SEND
-                        putExtra(Intent.EXTRA_TEXT, post.content)
-                        type = "text/plain"
-                    }
-
-                    val shareIntent =
-                        Intent.createChooser(intent, getString(R.string.chooser_share_post))
-                    startActivity(shareIntent)
+                override fun like(post: Post) {
+                    TODO("Not yet implemented")
                 }
 
                 override fun delete(post: Post) {
-                    viewModel.removeById(post.id)
+                    TODO("Not yet implemented")
                 }
 
-                override fun edit(post: Post) {
-                    viewModel.edit(post)
-//                    findNavController().navigate(R.id.newPostFragment,
-//                        Bundle().apply {
-//                            textArg = post.content
-//                        })
-                }
-
-                override fun onVidioClicked(post: Post) {
-                    val youtubeInternet = Intent(Intent.ACTION_VIEW, Uri.parse(post.video))
-                    startActivity(youtubeInternet)
+                override fun share(post: Post) {
+                    TODO("Not yet implemented")
                 }
 
                 override fun onPost(post: Post) {
+                    // передача аргумента (открытие по айди и + ключ категории труб  priznak)
+                    val ids: String? = arguments?.textArg
+                    bundle.putString(arguments?.textArg, ids)
+
                     val id = post.id
                     bundle.putLong("id", id)
-                    findNavController().navigate(R.id.fragment_single_post, Bundle().apply {
-//                        textArg = post.id.toString()
+                    findNavController().navigate(R.id.action_btObFragment_to_btCard, Bundle().apply {
+                      longArg = post.id
+                        textArg = arguments?.textArg
+
                     })
                 }
+            })
+
+//кнопка назад
+        binding.imgBack.setOnClickListener {
+            if (arguments?.textArg == "BT") {
+                  findNavController().navigate(
+                R.id.action_btObFragment_to_btFragment2)
+            } else {
+                findNavController().navigate(
+                    R.id.action_btObFragment_to_mainFragment)
             }
-
-        )
-
-
-        binding.list.adapter = adapter
-
-
-        viewModel.data.observe(viewLifecycleOwner) { state ->
-//            binding.progress.isVisible = state.loading
-//            binding.swipeRefreshLayout.isRefreshing = state.refreshing
-//            if (state.error) {
-//                Snackbar.make(binding.root, R.string.error_loading, Snackbar.LENGTH_LONG)
-//                    .setAction(R.string.retry_loading) { viewModel.loadPosts() }
-//                    .show()
-//            }
-//        }
         }
 
-
+//вывод списка с трубами + фильтр по аргументу
         viewModel.data.observe(viewLifecycleOwner) { state ->
-            adapter.submitList(state.posts)
+           adapter.submitList(state.posts.filter { it.priznak == arguments?.textArg })
 
-//            binding.emptyText.isVisible = state.empty
 
-        }
-
-            viewModel.edited.observe(viewLifecycleOwner) {
-                if (it.id == 0L) {
-                    return@observe
                 }
 
-                findNavController().navigate(R.id.to_newPostFragment, Bundle().apply {
-                    putString("content", it.content)
-                })
-            }
+        binding.spisok.adapter = adapter
 
-
-//        binding.swipeRefreshLayout.setOnRefreshListener {
-//            viewModel.refreshPosts()
-//        }
-//
-//        binding.fab.setOnClickListener {
-//            findNavController().navigate(R.id.to_newPostFragment)
-//        }
-
-
-            // binding.list.adapter = adapter
-            //binding.list.animation = null   // отключаем анимацию
-//        viewModel.data.observe(viewLifecycleOwner) { posts ->
-//            adapter.submitList(posts)
-//        }
-
-            binding.imgBack.setOnClickListener {
-                findNavController().navigate(R.id.btFragment)
-            }
-
-
-        return binding.root
+//назначение тайтла в зависимости от списка
+        when(arguments?.textArg) {
+            "BT" -> binding.txtTitle.setText("Список общеоборотных БТ")
+            "UBT" -> binding.txtTitle.setText("Список УБТ")
+            "NUBT" -> binding.txtTitle.setText("Список НУБТ")
+            "TBT" -> binding.txtTitle.setText("Список ТБТ")
+            "VBT" -> binding.txtTitle.setText("Список ВБТ")
+            "NKTgl" -> binding.txtTitle.setText("Список НКТ гладкая")
+            "NKTvis" -> binding.txtTitle.setText("Список НКТ высаженная")
+            "NKTplast" -> binding.txtTitle.setText("Список НКТ пластиковая")
+            "OTTM" -> binding.txtTitle.setText("Список ОТ - резьба ОТТМ")
+            "BC" -> binding.txtTitle.setText("Список ОТ - резьба BC")
+            "PREM" -> binding.txtTitle.setText("Список ОТ - резьба PREMIUM")
         }
-
+        return binding.root
     }
+
+
+
+}
+

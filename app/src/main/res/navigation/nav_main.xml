@@ -26,7 +26,14 @@
         android:id="@+id/btFragment"
         android:name="ru.netology.nmedia1022.fragment.bt.BtFragment"
         android:label="bt"
-        tools:layout="@layout/bt" />
+        tools:layout="@layout/bt" >
+        <action
+            android:id="@+id/action_btFragment_to_btObFragment"
+            app:destination="@id/btObFragment" />
+        <action
+            android:id="@+id/action_btFragment_to_btCard"
+            app:destination="@id/btCard" />
+    </fragment>
     <fragment
         android:id="@+id/disclaimerFragment"
         android:name="ru.netology.nmedia1022.fragment.DisclaimerFragment"
@@ -49,11 +56,17 @@
     </fragment>
     <fragment
         android:id="@+id/btObFragment"
-        android:name="ru.netology.nmedia1022.fragment.bt.BtObFragment"
+        android:name="ru.netology.nmedia1022.fragment.bt.BtOb"
         android:label="BtObFragment" >
         <action
-            android:id="@+id/action_btObFragment_to_fragment_single_post"
-            app:destination="@id/fragment_single_post" />
+            android:id="@+id/action_btObFragment_to_btCard"
+            app:destination="@id/btCard" />
+        <action
+            android:id="@+id/action_btObFragment_to_btFragment2"
+            app:destination="@id/btFragment" />
+        <action
+            android:id="@+id/action_btObFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
     </fragment>
     <fragment
         android:id="@+id/fragment_single_post"
@@ -66,5 +79,8 @@
         <action
             android:id="@+id/action_btCard_to_mainFragment"
             app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_btCard_to_btObFragment"
+            app:destination="@id/btObFragment" />
     </fragment>
 </navigation>

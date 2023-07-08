@@ -1,26 +1,41 @@
 package ru.netology.nmedia1022.adapter
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.PopupMenu
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import ru.netology.nmedia1022.R
-import ru.netology.nmedia1022.databinding.CardPostBinding
+import ru.netology.nmedia1022.databinding.BtCardBinding
+
 import ru.netology.nmedia1022.dto.Post
-import ru.netology.nmedia1022.utils.Utils
 
 
 class PostViewHolder(
-    private val binding: CardPostBinding,
+    private val binding: BtCardBinding,
     private val listener: PostActionListener
 
 ) : RecyclerView.ViewHolder(binding.root) {
     fun bind(post: Post) {
         with(binding) {
-            author.text = post.author
+            naimenovanie.text = post.naimenovanie
+            diametTrub.text = post.diametrTrub
+            vnDimetrTrub.text = post.vnDimetrTrub
+            thick.text = post.thick
+            ieu.text = post.ieu
+            rastiagUsilie.text = post.rastiagUsilie
+            krutMoment.text = post.krutMoment
+            vnDavlenie.text = post.vnDavlenie
+            tipZamka.text = post.tipZamka
+            narDiametrZamka.text = post.narDiametrZamka
+            vnDiametrZamka.text = post.vnDiametrZamka
+            pin.text = post.pin
+            rastiagUsilieZamka.text = post.rastiagUsilieZamka
+            krutMomentZamka.text = post.krutMoment
+            g105.text = post.g105
+      priznak.text = post.priznak
+
+
+
 //            published.text = post.published
 //            content.text = post.content
 //
@@ -42,9 +57,10 @@ class PostViewHolder(
 //            video.setOnClickListener {
 //                listener.onVidioClicked(post)
 //            }
-            author.setOnClickListener{
+            naimenovanie.setOnClickListener{
                 listener.onPost(post)
             }
+
 
 //
 //            if (post.video == null) {
@@ -82,15 +98,15 @@ class PostViewHolder(
     }
 }
 
-class PostDiffCallback : DiffUtil.ItemCallback<Post>() {
-    override fun areItemsTheSame(oldItem: Post, newItem: Post): Boolean {
-        return oldItem.id == newItem.id
-    }
-
-    override fun areContentsTheSame(oldItem: Post, newItem: Post): Boolean {
-        return oldItem == newItem
-    }
-}
+//class PostDiffCallback : DiffUtil.ItemCallback<Post>() {
+//    override fun areItemsTheSame(oldItem: Post, newItem: Post): Boolean {
+//        return oldItem.id == newItem.id
+//    }
+//
+//    override fun areContentsTheSame(oldItem: Post, newItem: Post): Boolean {
+//        return oldItem == newItem
+//    }
+//}
 
 
 interface PostActionListener {
@@ -113,11 +129,13 @@ class PostsAdapter(
     //вытаскиваем элемент из списка
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PostViewHolder {
-        val binding = CardPostBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding = BtCardBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+
         return PostViewHolder(binding, listener)
         //кнопка активная онпосткликед!!! еще одна
     }
 
+    
     override fun onBindViewHolder(holder: PostViewHolder, position: Int) {
        // val post = getItem(position)
         holder.bind(getItem(position))

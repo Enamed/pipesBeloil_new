@@ -8,6 +8,11 @@
     tools:context=".fragment.FeedFragment">
 
 
+
+
+
+
+
 <!--    <ImageView-->
 <!--        android:id="@+id/avatar"-->
 <!--        android:layout_width="53dp"-->
@@ -42,18 +47,7 @@
 <!--        android:text="Нетология - университет интернет профессий"-->
 <!--        tools:ignore="MissingConstraints" />-->
 
-    <Button
-        android:id="@+id/author"
-        style="@style/MenuButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="188dp"
-        android:text="Общеоборотные трубы"
-        android:textColor="#383636"
-        app:icon="@drawable/baseline_arrow_right_alt_24"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:rippleColor="#8000B634"
-        tools:ignore="MissingConstraints" />
+
 
 <!--    <TextView-->
 <!--        android:id="@+id/published"-->
