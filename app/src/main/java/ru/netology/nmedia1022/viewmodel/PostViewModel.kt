@@ -4,8 +4,6 @@ import FeedModel
 import android.app.Application
 import androidx.lifecycle.*
 import ru.netology.nmedia1022.dto.Post
-
-
 import ru.netology.nmedia1022.repository.*
 import java.io.IOException
 import kotlin.concurrent.thread
