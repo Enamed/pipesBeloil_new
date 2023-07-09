@@ -19,35 +19,35 @@
         app:layout_constraintTop_toTopOf="@+id/imgNktVis" />
 
     <ImageView
-        android:id="@+id/imgNktGl2"
+        android:id="@+id/imgOttm"
         android:layout_width="66dp"
         android:layout_height="69dp"
         android:layout_marginTop="8dp"
         android:src="@drawable/bt1"
-        app:layout_constraintEnd_toStartOf="@+id/imgNktGl3"
+        app:layout_constraintEnd_toStartOf="@+id/imgBC"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/polosaNkt2" />
 
     <ImageView
-        android:id="@+id/imgNktGl3"
+        android:id="@+id/imgBC"
         android:layout_width="66dp"
         android:layout_height="69dp"
         android:src="@drawable/bt1"
-        app:layout_constraintEnd_toStartOf="@+id/imgNktGl4"
+        app:layout_constraintEnd_toStartOf="@+id/imgPrem"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/imgNktGl2"
-        app:layout_constraintTop_toTopOf="@+id/imgNktGl2" />
+        app:layout_constraintStart_toEndOf="@+id/imgOttm"
+        app:layout_constraintTop_toTopOf="@+id/imgOttm" />
 
     <ImageView
-        android:id="@+id/imgNktGl4"
+        android:id="@+id/imgPrem"
         android:layout_width="66dp"
         android:layout_height="69dp"
         android:src="@drawable/bt1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/imgNktGl3"
-        app:layout_constraintTop_toTopOf="@+id/imgNktGl3" />
+        app:layout_constraintStart_toEndOf="@+id/imgBC"
+        app:layout_constraintTop_toTopOf="@+id/imgBC" />
 
     <ImageView
         android:id="@+id/imgNktVis"
@@ -78,7 +78,7 @@
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/logobeloil_round" />
+        app:srcCompat="@mipmap/logo" />
 
     <TextView
         android:id="@+id/footer"
@@ -356,9 +356,9 @@
         android:text="OTTM"
         android:textAlignment="center"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/imgNktGl2"
-        app:layout_constraintStart_toStartOf="@+id/imgNktGl2"
-        app:layout_constraintTop_toBottomOf="@+id/imgNktGl2" />
+        app:layout_constraintEnd_toEndOf="@+id/imgOttm"
+        app:layout_constraintStart_toStartOf="@+id/imgOttm"
+        app:layout_constraintTop_toBottomOf="@+id/imgOttm" />
 
     <TextView
         android:id="@+id/txtButtress"
@@ -368,9 +368,9 @@
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/imgNktGl3"
-        app:layout_constraintStart_toStartOf="@+id/imgNktGl3"
-        app:layout_constraintTop_toBottomOf="@+id/imgNktGl3" />
+        app:layout_constraintEnd_toEndOf="@+id/imgBC"
+        app:layout_constraintStart_toStartOf="@+id/imgBC"
+        app:layout_constraintTop_toBottomOf="@+id/imgBC" />
 
     <TextView
         android:id="@+id/txtPremium"
@@ -380,15 +380,14 @@
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/imgNktGl4"
-        app:layout_constraintStart_toStartOf="@+id/imgNktGl4"
-        app:layout_constraintTop_toBottomOf="@+id/imgNktGl4" />
+        app:layout_constraintEnd_toEndOf="@+id/imgPrem"
+        app:layout_constraintStart_toStartOf="@+id/imgPrem"
+        app:layout_constraintTop_toBottomOf="@+id/imgPrem" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
     <!--    android:layout_marginStart="16dp"-->
     <!--    android:layout_marginTop="8dp"-->
     <!--    android:layout_marginEnd="16dp"-->
-
 
 
