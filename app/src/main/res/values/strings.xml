@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Pipes Beloil</string>
+    <string name="title_front_beloilpipes">СПРАВОЧНИК\nТРУБ НЕФТЯНОГО СОРТАМЕНТА\nРУП \"ПРОИЗВОДСТВЕННОЕ ОБЬЕДИНЕНИЕ \"БЕЛОРУСНЕФТЬ\"</string>
+    <string name="otkaz_otvetstvennosti">Отказ от ответственности</string>
 </resources>

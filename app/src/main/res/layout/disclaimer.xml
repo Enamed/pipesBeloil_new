@@ -72,4 +72,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbarBack" />
 
+<!--    <Spinner-->
+<!--        android:id="@+id/spinner"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:addStatesFromChildren="false"-->
+<!--        android:clickable="false"-->
+<!--        android:clipToPadding="false"-->
+<!--        android:dropDownWidth="match_parent"-->
+<!--        android:entries="@array/spisokSpinner"-->
+<!--        android:longClickable="false"-->
+<!--        android:nestedScrollingEnabled="false"-->
+<!--        android:spinnerMode="dropdown"-->
+<!--        android:splitMotionEvents="false"-->
+<!--        android:textAlignment="center"-->
+<!--        app:barrierAllowsGoneWidgets="false"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textView2" />-->
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
