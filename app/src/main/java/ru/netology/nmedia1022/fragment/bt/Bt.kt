@@ -75,6 +75,8 @@ class BtFragment: Fragment(R.layout.bt) {
 //
 //
 //        }
+
+
         binding.buttonObsheoborot.setOnClickListener {
             val ids = "BT"
             bundle.putString("BT", ids)
@@ -82,6 +84,69 @@ class BtFragment: Fragment(R.layout.bt) {
                 textArg = "BT"
             })
         }
+
+        binding.pipes42.setOnClickListener {
+            val ids = "42"
+            bundle.putString("42", ids)
+            findNavController().navigate(R.id.btObFragment, Bundle().apply {
+                textArg = "42"
+            })
+        }
+
+        binding.pipes60.setOnClickListener {
+            val ids = "60,3"
+            bundle.putString("60,3", ids)
+            findNavController().navigate(R.id.btObFragment, Bundle().apply {
+                textArg = "60,3"
+            })
+        }
+
+        binding.pipes73.setOnClickListener {
+            val ids = "73"
+            bundle.putString("73", ids)
+            findNavController().navigate(R.id.btObFragment, Bundle().apply {
+                textArg = "73"
+            })
+        }
+        binding.pipes89.setOnClickListener {
+            val ids = "89"
+            bundle.putString("89", ids)
+            findNavController().navigate(R.id.btObFragment, Bundle().apply {
+                textArg = "89"
+            })
+        }
+
+        binding.pipes102.setOnClickListener {
+            val ids = "102"
+            bundle.putString("102", ids)
+            findNavController().navigate(R.id.btObFragment, Bundle().apply {
+                textArg = "102"
+            })
+        }
+
+        binding.pipes114.setOnClickListener {
+            val ids = "114"
+            bundle.putString("114", ids)
+            findNavController().navigate(R.id.btObFragment, Bundle().apply {
+                textArg = "114"
+            })
+        }
+        binding.pipes127.setOnClickListener {
+            val ids = "127"
+            bundle.putString("127", ids)
+            findNavController().navigate(R.id.btObFragment, Bundle().apply {
+                textArg = "127"
+            })
+        }
+
+        binding.pipes140.setOnClickListener {
+            val ids = "140"
+            bundle.putString("140", ids)
+            findNavController().navigate(R.id.btObFragment, Bundle().apply {
+                textArg = "140"
+            })
+        }
+//        60,3
 
 //        viewModel.edited.observe(viewLifecycleOwner) {
 ////            if (it.id == 0L) {

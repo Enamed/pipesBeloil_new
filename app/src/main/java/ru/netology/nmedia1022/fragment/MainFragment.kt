@@ -71,8 +71,6 @@ class MainFragment : Fragment(R.layout.main) {
             findNavController().navigate(R.id.btFragment)
         }
 
-
-
         binding.imgUbt.setOnClickListener {
             val ids: String = "UBT"
             bundle.putString("UBT", ids)

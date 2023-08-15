@@ -8,16 +8,81 @@
     tools:context=".fragment.bt.BtFragment">
 
     <Button
-        android:id="@+id/buttonComplektU"
+        android:id="@+id/pipes140"
         style="@style/MenuButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Комплекты УПНПиРС"
+        android:text="⌀ 140"
         android:textColor="#383636"
         app:icon="@drawable/baseline_arrow_right_alt_24"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonComplektS"
+        app:layout_constraintTop_toBottomOf="@+id/pipes127"
+        app:rippleColor="#8000B634" />
+
+    <Button
+        android:id="@+id/pipes114"
+        style="@style/MenuButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="⌀ 114"
+        android:textColor="#383636"
+        app:icon="@drawable/baseline_arrow_right_alt_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pipes102"
+        app:rippleColor="#8000B634" />
+
+    <Button
+        android:id="@+id/pipes102"
+        style="@style/MenuButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="⌀ 102"
+        android:textColor="#383636"
+        app:icon="@drawable/baseline_arrow_right_alt_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pipes89"
+        app:rippleColor="#8000B634" />
+
+    <Button
+        android:id="@+id/pipes127"
+        style="@style/MenuButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="⌀ 127"
+        android:textColor="#383636"
+        app:icon="@drawable/baseline_arrow_right_alt_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pipes114"
+        app:rippleColor="#8000B634" />
+
+    <Button
+        android:id="@+id/pipes89"
+        style="@style/MenuButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="⌀ 89"
+        android:textColor="#383636"
+        app:icon="@drawable/baseline_arrow_right_alt_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pipes73"
+        app:rippleColor="#8000B634" />
+
+    <Button
+        android:id="@+id/pipes73"
+        style="@style/MenuButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="⌀ 73"
+        android:textColor="#383636"
+        app:icon="@drawable/baseline_arrow_right_alt_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pipes60"
         app:rippleColor="#8000B634" />
 
     <com.google.android.material.appbar.MaterialToolbar
@@ -78,7 +143,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:text="Общеоборотные трубы"
+        android:text="Список труб"
         android:textColor="#383636"
         app:icon="@drawable/baseline_arrow_right_alt_24"
         app:layout_constraintEnd_toEndOf="parent"
@@ -86,16 +151,30 @@
         app:rippleColor="#8000B634" />
 
     <Button
-        android:id="@+id/buttonComplektS"
+        android:id="@+id/pipes42"
         style="@style/MenuButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Комплекты СУБР"
+        android:text="⌀ 42"
         android:textColor="#383636"
         app:icon="@drawable/baseline_arrow_right_alt_24"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonObsheoborot"
         app:rippleColor="#8000B634" />
+
+    <Button
+        android:id="@+id/pipes60"
+        style="@style/MenuButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="⌀ 60,3"
+        android:textColor="#383636"
+        app:icon="@drawable/baseline_arrow_right_alt_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pipes42"
+        app:rippleColor="#8000B634" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -138,6 +138,7 @@ class BtCard : Fragment(R.layout.bt_card) {
             "OTTM" -> binding.txtTitle.setText("ОТ - резьба ОТТМ")
             "BC" -> binding.txtTitle.setText("ОТ - резьба BC")
             "PREM" -> binding.txtTitle.setText("ОТ - резьба PREMIUM")
+            "42" -> binding.txtTitle.setText("Бурильная труба ⌀42")
         }
 
 

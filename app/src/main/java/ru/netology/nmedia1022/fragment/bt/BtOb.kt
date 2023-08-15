@@ -69,26 +69,61 @@ class BtOb: Fragment(R.layout.bt_ob) {
                     })
                 }
             })
+        //проверка на латинский алфавит
+        fun isLetters(string: String): Boolean {
+            return string.none { it !in 'A'..'Z' && it !in 'a'..'z' }
+        }
+        //проверка на цифры
+        fun isNumeric(s: String): Boolean {
+            return try {
+                s.toDouble()
+                true
+            } catch (e: NumberFormatException) {
+                false
+            }
+        }
+
 
 //кнопка назад
+
+  //      TODO("сделать возврат для двойки")
         binding.imgBack.setOnClickListener {
             if (arguments?.textArg == "BT") {
                   findNavController().navigate(
                 R.id.action_btObFragment_to_btFragment2)
-            } else {
+            }
+            else if (isNumeric(arguments?.textArg.toString())) {
+                findNavController().navigate(
+                    R.id.action_btObFragment_to_btFragment2)
+            }
+            else if (arguments?.textArg == "60,3") {
+                findNavController().navigate(
+                    R.id.action_btObFragment_to_btFragment2)
+            }
+            else {
                 findNavController().navigate(
                     R.id.action_btObFragment_to_mainFragment)
             }
         }
 
+
+
 //вывод списка с трубами + фильтр по аргументу
         viewModel.data.observe(viewLifecycleOwner) { state ->
-           adapter.submitList(state.posts.filter { it.priznak == arguments?.textArg })
+            if (isLetters(arguments?.textArg.toString())) {
+           adapter.submitList(state.posts.filter { it.priznak == arguments?.textArg })}
+
+            else if(isNumeric(arguments?.textArg.toString())){
+            adapter.submitList(state.posts.filter { it.diametrTrub == arguments?.textArg })}
+
+            else if(arguments?.textArg == "60,3"){
+                adapter.submitList(state.posts.filter { it.diametrTrub == arguments?.textArg })}
 
 
                 }
 
         binding.spisok.adapter = adapter
+
 
 //назначение тайтла в зависимости от списка
         when(arguments?.textArg) {
