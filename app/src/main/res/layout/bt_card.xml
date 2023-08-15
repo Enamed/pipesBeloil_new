@@ -28,13 +28,68 @@
 
 
         <TextView
-            android:id="@+id/krutMomentZamka9"
+            android:id="@+id/textView37"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="1dp"
-            android:text="15"
-            app:layout_constraintStart_toStartOf="@+id/krutMomentZamka7"
-            app:layout_constraintTop_toBottomOf="@+id/krutMomentZamka7" />
+            android:text="- новая труба, Нм:"
+            app:layout_constraintStart_toStartOf="@+id/textView15"
+            app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+        <TextView
+            android:id="@+id/textView36"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="- 2 класс, Нм:"
+            app:layout_constraintStart_toStartOf="@+id/textView39"
+            app:layout_constraintTop_toBottomOf="@+id/textView39" />
+
+        <TextView
+            android:id="@+id/textView39"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="- 1 класс, Нм:"
+            app:layout_constraintStart_toStartOf="@+id/textView37"
+            app:layout_constraintTop_toBottomOf="@+id/textView37" />
+
+        <TextView
+            android:id="@+id/textView34"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="- новая труба, кН:"
+            app:layout_constraintStart_toStartOf="@+id/textView14"
+            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+        <TextView
+            android:id="@+id/textView33"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="- 1 класс, кН:"
+            app:layout_constraintStart_toStartOf="@+id/textView34"
+            app:layout_constraintTop_toBottomOf="@+id/textView34" />
+
+        <TextView
+            android:id="@+id/textView32"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="- 2 класс, кН:"
+            app:layout_constraintStart_toStartOf="@+id/textView33"
+            app:layout_constraintTop_toBottomOf="@+id/textView33" />
+
+        <TextView
+            android:id="@+id/textView31"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="- 2 класс, кН:"
+            app:layout_constraintStart_toStartOf="@+id/textView30"
+            app:layout_constraintTop_toBottomOf="@+id/textView30" />
+
+        <TextView
+            android:id="@+id/textView30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="- 1 класс, кН:"
+            app:layout_constraintStart_toStartOf="@+id/textView28"
+            app:layout_constraintTop_toBottomOf="@+id/textView28" />
 
         <TextView
             android:id="@+id/polosaBt2"
@@ -61,6 +116,7 @@
             android:textAllCaps="true"
             android:textColor="#FFFFFF"
             android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
@@ -78,7 +134,73 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView20" />
+            app:layout_constraintTop_toBottomOf="@+id/textView26" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="TextView"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+        <TextView
+            android:id="@+id/krutMomentZamka4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="TEST"
+            app:layout_constraintStart_toStartOf="@+id/krutMomentZamka3"
+            app:layout_constraintTop_toBottomOf="@+id/krutMomentZamka3" />
+
+        <TextView
+            android:id="@+id/krutMomentZamka6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="724-931"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/polosaBt5" />
+
+        <TextView
+            android:id="@+id/krutMomentZamka9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="15"
+            app:layout_constraintStart_toStartOf="@+id/krutMomentZamka7"
+            app:layout_constraintTop_toBottomOf="@+id/krutMomentZamka7" />
+
+        <TextView
+            android:id="@+id/krutMomentZamka7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="793"
+            app:layout_constraintStart_toStartOf="@+id/krutMomentZamka6"
+            app:layout_constraintTop_toBottomOf="@+id/krutMomentZamka6" />
+
+        <TextView
+            android:id="@+id/krutMomentZamka3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="42065"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/polosaBt4" />
+
+        <TextView
+            android:id="@+id/krutMomentZamka5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="TEST"
+            app:layout_constraintStart_toStartOf="@+id/krutMomentZamka4"
+            app:layout_constraintTop_toBottomOf="@+id/krutMomentZamka4" />
 
         <TextView
             android:id="@+id/polosaBt5"
@@ -93,8 +215,34 @@
             android:textColor="#FFFFFF"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+            app:layout_constraintTop_toBottomOf="@+id/textView42" />
+
+        <TextView
+            android:id="@+id/textView41"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="- новая труба, Нм:"
+            app:layout_constraintStart_toStartOf="@+id/textView8"
+            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+        <TextView
+            android:id="@+id/textView40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:text="- 1 класс, Нм:"
+            app:layout_constraintStart_toStartOf="@+id/textView41"
+            app:layout_constraintTop_toBottomOf="@+id/textView41" />
+
+        <TextView
+            android:id="@+id/textView42"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="- 2 класс, Нм:"
+            app:layout_constraintStart_toStartOf="@+id/textView40"
+            app:layout_constraintTop_toBottomOf="@+id/textView40" />
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbarBack"
@@ -214,49 +362,7 @@
             android:layout_height="wrap_content"
             android:text="51"
             app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/rastiagUsilieZamka" />
-
-        <TextView
-            android:id="@+id/krutMomentZamka3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="42065"
-            app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/polosaBt4" />
-
-        <TextView
-            android:id="@+id/krutMomentZamka4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TEST"
-            app:layout_constraintStart_toStartOf="@+id/krutMomentZamka3"
-            app:layout_constraintTop_toBottomOf="@+id/krutMomentZamka3" />
-
-        <TextView
-            android:id="@+id/krutMomentZamka5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TEST"
-            app:layout_constraintStart_toStartOf="@+id/krutMomentZamka4"
-            app:layout_constraintTop_toBottomOf="@+id/krutMomentZamka4" />
-
-        <TextView
-            android:id="@+id/krutMomentZamka6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="724-931"
-            app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/polosaBt5" />
-
-        <TextView
-            android:id="@+id/krutMomentZamka7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="793"
-            app:layout_constraintStart_toStartOf="@+id/krutMomentZamka6"
-            app:layout_constraintTop_toBottomOf="@+id/krutMomentZamka6" />
+            app:layout_constraintTop_toBottomOf="@+id/textView20" />
 
         <TextView
             android:id="@+id/rastiagUsilieZamka"
@@ -264,7 +370,7 @@
             android:layout_height="wrap_content"
             android:text="51"
             app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/pin" />
+            app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
         <TextView
             android:id="@+id/vnDavlenie"
@@ -355,7 +461,7 @@
             android:id="@+id/textView14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Растягивающее усилие, кН:"
+            android:text="Растягивающее усилие:"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@+id/textView4"
             app:layout_constraintTop_toBottomOf="@+id/textView4" />
@@ -364,7 +470,7 @@
             android:id="@+id/textView19"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Растягивающее усилие, кН:"
+            android:text="Растягивающее усилие:"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@+id/textView18"
             app:layout_constraintTop_toBottomOf="@+id/textView18" />
@@ -412,40 +518,55 @@
             app:layout_constraintTop_toBottomOf="@+id/textView23" />
 
         <TextView
-            android:id="@+id/textView10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=" - Давление для ГКШ 1800, МПа:"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/textView8"
-            app:layout_constraintTop_toBottomOf="@+id/textView8" />
-
-        <TextView
-            android:id="@+id/textView11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=" - Давление для ГКШ 3200, МПа:"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/textView10"
-            app:layout_constraintTop_toBottomOf="@+id/textView10" />
-
-        <TextView
             android:id="@+id/textView15"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Крутящий момент, Нм:"
+            android:text="Крутящий момент"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/textView14"
-            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+            app:layout_constraintStart_toStartOf="@+id/textView32"
+            app:layout_constraintTop_toBottomOf="@+id/textView32" />
 
         <TextView
             android:id="@+id/textView20"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Крутящий момент, Нм:"
+            android:text="Крутящий момент:"
             android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/textView31"
+            app:layout_constraintTop_toBottomOf="@+id/textView31" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="- новая труба, Нм:"
+            app:layout_constraintStart_toStartOf="@+id/textView20"
+            app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+        <TextView
+            android:id="@+id/textView28"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="- новая труба, кН:"
             app:layout_constraintStart_toStartOf="@+id/textView19"
             app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+        <TextView
+            android:id="@+id/textView25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="- 1 класс, Нм:"
+            app:layout_constraintStart_toStartOf="@+id/textView5"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+        <TextView
+            android:id="@+id/textView26"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:text="- 2 класс, Нм:"
+            app:layout_constraintStart_toStartOf="@+id/textView25"
+            app:layout_constraintTop_toBottomOf="@+id/textView25" />
 
         <TextView
             android:id="@+id/textView16"
@@ -453,8 +574,8 @@
             android:layout_height="wrap_content"
             android:text="Внутреннее давление, МПа:"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/textView15"
-            app:layout_constraintTop_toBottomOf="@+id/textView15" />
+            app:layout_constraintStart_toStartOf="@+id/textView36"
+            app:layout_constraintTop_toBottomOf="@+id/textView36" />
 
         <TextView
             android:id="@+id/textView4"
@@ -543,16 +664,6 @@
             app:layout_constraintBottom_toTopOf="@+id/footer"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TextView"
-            android:visibility="invisible"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView24" />
 
 
         <!--</androidx.constraintlayout.widget.ConstraintLayout>-->
