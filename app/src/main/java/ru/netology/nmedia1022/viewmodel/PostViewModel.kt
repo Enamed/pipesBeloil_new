@@ -32,7 +32,18 @@ private val empty = Post(
     rastiagUsilieZamka = "122",
     krutMomentZamka = "234",
     g105 = "S-135",
-    priznak = ""
+    priznak = "",
+    rastiagUsilie_1klass = "090",
+    rastiagUsilie_2klass = "090",
+    krutMoment_1klass = "",
+    krutMoment_2klass = "",
+    momentNew = "",
+    moment_1klass = "",
+    moment_2klass = "",
+    sigma_t = "",
+    sigma_v = "",
+    otnos_rast = "",
+    sertificat = ""
 )
 
 class PostViewModel(application: Application) : AndroidViewModel(application) {
@@ -42,14 +53,13 @@ class PostViewModel(application: Application) : AndroidViewModel(application) {
     val data: LiveData<FeedModel>
         get() = _data
     val edited = MutableLiveData(empty)
-   // private val _postCreated = SingleLiveEvent<Unit>()
+    // private val _postCreated = SingleLiveEvent<Unit>()
     //val postCreated: LiveData<Unit>
-      //  get() = _postCreated
+    //  get() = _postCreated
 
     init {
         loadPosts()
     }
-
 
 
 //обновление свайпом
@@ -59,7 +69,6 @@ class PostViewModel(application: Application) : AndroidViewModel(application) {
 ////
 
 
-
     fun loadPosts() {
         thread {
             // Начинаем загрузку
@@ -67,7 +76,7 @@ class PostViewModel(application: Application) : AndroidViewModel(application) {
             try {
                 // Данные успешно получены
                 val posts = repository.getALL()
-               // val postslist = repository.getALL()
+                // val postslist = repository.getALL()
                 FeedModel(posts = posts, empty = posts.isEmpty())
             } catch (e: IOException) {
                 // Получена ошибка
@@ -119,9 +128,6 @@ class PostViewModel(application: Application) : AndroidViewModel(application) {
 //    }
 
     // обновление свайпом
-
-
-
 
 
     ///

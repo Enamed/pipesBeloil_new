@@ -39,9 +39,21 @@ private val empty = Post(
     rastiagUsilieZamka = "122",
     krutMomentZamka = "234",
     g105 = "S-135",
-    priznak = ""
-
+    priznak = "",
+    rastiagUsilie_1klass = "",
+    rastiagUsilie_2klass = "",
+    krutMoment_1klass = "",
+    krutMoment_2klass = "",
+    momentNew = "",
+    moment_1klass = "",
+    moment_2klass = "",
+    sigma_t = "",
+    sigma_v = "",
+    otnos_rast = "",
+    sertificat = ""
 )
+
+
 
 class ListViewModel(application: Application) : AndroidViewModel(application) {
     // упрощённый вариант

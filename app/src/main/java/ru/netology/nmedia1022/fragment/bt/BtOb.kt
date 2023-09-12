@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import okhttp3.internal.filterList
 import ru.netology.nmedia1022.R
 import ru.netology.nmedia1022.adapter.*
 import ru.netology.nmedia1022.databinding.BtObBinding
@@ -16,6 +17,8 @@ import ru.netology.nmedia1022.dto.Post
 import ru.netology.nmedia1022.utils.CompanionArg.Companion.longArg
 import ru.netology.nmedia1022.utils.CompanionArg.Companion.textArg
 import ru.netology.nmedia1022.viewmodel.PostViewModel
+import java.text.RuleBasedCollator
+import java.util.Locale
 
 
 class BtOb: Fragment(R.layout.bt_ob) {
@@ -86,7 +89,7 @@ class BtOb: Fragment(R.layout.bt_ob) {
 
 //кнопка назад
 
-  //      TODO("сделать возврат для двойки")
+
         binding.imgBack.setOnClickListener {
             if (arguments?.textArg == "BT") {
                   findNavController().navigate(
@@ -107,11 +110,28 @@ class BtOb: Fragment(R.layout.bt_ob) {
         }
 
 
+//        adapter.items = listOf<Clients> из своей активити.
+//        Вам просто нужно будет перед поставлением данных сортировать
+//                этот список items.sortBy { it.time }
 
 //вывод списка с трубами + фильтр по аргументу
         viewModel.data.observe(viewLifecycleOwner) { state ->
             if (isLetters(arguments?.textArg.toString())) {
-           adapter.submitList(state.posts.filter { it.priznak == arguments?.textArg })}
+
+//             adapter.submitList(state.posts.sortedWith(compareBy({it.priznak}, {it.diametrTrub} )))
+
+
+                val yoRule = "< 42 < 60,3 < 73 < 89 < 102 < 114 < 127 < 140"
+
+
+             //  adapter.submitList(state.posts.filter { it.priznak == arguments?.textArg })}
+
+                adapter.submitList(state.posts.filter{ it.priznak == arguments?.textArg})
+
+
+
+            }
+//            adapter.submitList(state.posts.filter { it.priznak == arguments?.textArg })}
 
             else if(isNumeric(arguments?.textArg.toString())){
             adapter.submitList(state.posts.filter { it.diametrTrub == arguments?.textArg })}

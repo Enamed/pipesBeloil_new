@@ -28,7 +28,18 @@ data class Post(
     val rastiagUsilieZamka: String,
     val krutMomentZamka: String,
     val g105: String,
-    val priznak: String
+    val priznak: String,
+    val rastiagUsilie_1klass: String,
+    val rastiagUsilie_2klass: String,
+    val krutMoment_1klass: String,
+    val krutMoment_2klass: String,
+    val momentNew: String,
+    val moment_1klass: String,
+    val moment_2klass: String,
+    val sigma_t: String,
+    val sigma_v: String,
+    val otnos_rast: String,
+    val sertificat: String
     //dsfsdfdagadfgadfgadgdfga
 
 

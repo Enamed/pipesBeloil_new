@@ -33,7 +33,18 @@ data class PostEntity(
     val rastiagUsilieZamka: String,
     val krutMomentZamka: String,
     val g105: String,
-    val priznak: String
+    val priznak: String,
+    val rastiagUsilie_1klass: String,
+    val rastiagUsilie_2klass: String,
+    val krutMoment_1klass: String,
+    val krutMoment_2klass: String,
+    val momentNew: String,
+    val moment_1klass: String,
+    val moment_2klass: String,
+    val sigma_t: String,
+    val sigma_v: String,
+    val otnos_rast: String,
+    val sertificat: String
 //val attachment: Attachment? = null
 ) {
 
@@ -46,7 +57,9 @@ data class PostEntity(
                 countVisio, likes, naimenovanie, diametrTrub,
                 vnDimetrTrub, thick, ieu, rastiagUsilie, krutMoment,
                 vnDavlenie, tipZamka, narDiametrZamka, vnDiametrZamka,
-                pin, rastiagUsilieZamka, krutMoment, krutMomentZamka, g105, priznak
+                pin, rastiagUsilieZamka, krutMoment, krutMomentZamka, g105, priznak,
+                rastiagUsilie_1klass, rastiagUsilie_2klass, krutMoment_1klass, krutMoment_2klass,
+                momentNew, moment_1klass, moment_2klass, sigma_t, sigma_v, otnos_rast, sertificat
             )
 
         }
@@ -79,7 +92,18 @@ data class PostEntity(
             rastiagUsilieZamka = rastiagUsilieZamka,
             krutMomentZamka = krutMomentZamka,
             g105 = g105,
-            priznak = priznak
+            priznak = priznak,
+            rastiagUsilie_1klass = rastiagUsilie_1klass,
+          rastiagUsilie_2klass = rastiagUsilie_2klass,
+       krutMoment_1klass = krutMoment_1klass,
+        krutMoment_2klass = krutMoment_2klass,
+         momentNew = momentNew,
+        moment_1klass = moment_1klass,
+        moment_2klass = moment_2klass,
+        sigma_t = sigma_t,
+        sigma_v = sigma_v,
+        otnos_rast = otnos_rast,
+            sertificat = sertificat
         )
     }
 }

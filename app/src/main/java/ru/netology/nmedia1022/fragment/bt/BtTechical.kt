@@ -1,30 +1,29 @@
 package ru.netology.nmedia1022.fragment.bt
 
-import android.R
-import android.R.id
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
-import android.provider.AlarmClock.EXTRA_MESSAGE
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.EditText
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import ru.netology.nmedia1022.R
 import ru.netology.nmedia1022.databinding.BtCardBinding
+import ru.netology.nmedia1022.databinding.BtTechnicalBinding
 import ru.netology.nmedia1022.utils.CompanionArg.Companion.longArg
 import ru.netology.nmedia1022.utils.CompanionArg.Companion.textArg
 import ru.netology.nmedia1022.viewmodel.PostViewModel
 
 
-class BtCard : Fragment(ru.netology.nmedia1022.R.layout.bt_card) {
+class BtTechical : Fragment(R.layout.bt_technical) {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding = BtCardBinding.inflate(layoutInflater)
+        val binding = BtTechnicalBinding.inflate(layoutInflater)
         val viewModel: PostViewModel by viewModels(::requireParentFragment)
         val bundle = Bundle()
 
@@ -33,34 +32,8 @@ class BtCard : Fragment(ru.netology.nmedia1022.R.layout.bt_card) {
                 val post = state.posts.find { it.id == arguments?.longArg }
 
                 if (post != null) {
+                  sertificat.text = post.sertificat
 
-                    naimenovanie.text = post.naimenovanie
-                    diametTrub.text = post.diametrTrub
-                    vnDimetrTrub.text = post.vnDimetrTrub
-                    thick.text = post.thick
-                    ieu.text = post.ieu
-                    rastiagUsilie.text = post.rastiagUsilie
-                    krutMoment.text = post.krutMoment
-                    vnDavlenie.text = post.vnDavlenie
-                    tipZamka.text = post.tipZamka
-                    narDiametrZamka.text = post.narDiametrZamka
-                    vnDiametrZamka.text = post.vnDiametrZamka
-                    pin.text = post.pin
-                    rastiagUsilieZamka.text = post.rastiagUsilieZamka
-                    krutMomentZamka.text = post.krutMoment
-                    g105.text = post.g105
-                    priznak.text = post.priznak
-                    rastiagUsilie1klass.text = post.rastiagUsilie_1klass
-                    rastiagUsilie2klass.text = post.rastiagUsilie_2klass
-                    krutMoment1klass.text = post.krutMoment_1klass
-                    krutMoment2klass.text = post.krutMoment_2klass
-                    momentNew.text = post.momentNew
-                    moment1klass.text = post.moment_1klass
-                    moment2klass.text = post.moment_2klass
-                    sigmaT.text = post.sigma_t
-                    sigmaV.text = post.sigma_v
-                    otnosRast.text = post.otnos_rast
-                  //  sertificat.text = post.sertificat
                 }
 
             }
@@ -82,37 +55,13 @@ class BtCard : Fragment(ru.netology.nmedia1022.R.layout.bt_card) {
             val redirect = arguments?.textArg
             when (arguments?.textArg) {
                 redirect -> findNavController().navigate(
-                    ru.netology.nmedia1022.R.id.action_btCard_to_btObFragment,
+                    R.id.action_btCard_to_btObFragment,
                     Bundle().apply {
                         textArg = arguments?.textArg
                     })
             }
         }
 
-        binding.buttonSertificat.setOnClickListener {
-
-            val id = it.id
-            bundle.putString("id", id.toString())
-            findNavController().navigate(ru.netology.nmedia1022.R.id.action_btCard_to_btTechical2, Bundle().apply {
-               longArg = arguments?.longArg!!
-            })
-//ДОДЕЛАТЬ ПЕРЕДАЧУ ID АРГУМЕНТА не вручную
-        }
-
-
-//        val id = post.id
-//        bundle.putLong("id", id)
-//        findNavController().navigate(ru.netology.nmedia1022.R.id.action_btObFragment_to_btCard, Bundle().apply {
-//            longArg = post.id
-//            textArg = arguments?.textArg
-
-
-
-
-        val olae = binding.priznak.toString()
-
-
-        //   Post {}
         when (arguments?.textArg) {
             "BT" -> binding.txtTitle.setText("Общеоборотные трубы")
             "UBT" -> binding.txtTitle.setText("УБТ")

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/barrier0"
+    android:layout_width="match_parent"
+
+
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+
+
+    android:fitsSystemWindows="true">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        tools:context=".fragment.bt.BtTechical">
+
+        <!--<ScrollView-->
+        <!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
+        <!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+        <!--    xmlns:tools="http://schemas.android.com/tools"-->
+        <!--    android:layout_width="match_parent"-->
+        <!--    android:layout_height="match_parent">-->
+
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbarBack"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="#00A544"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imgBack"
+            style="@android:style/Widget.Holo.ImageButton"
+            android:layout_width="53dp"
+            android:layout_height="56dp"
+            android:background="#00A544"
+            android:baselineAlignBottom="false"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/baseline_arrow_back_24"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:text="Общеоборотные трубы"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/toolbarBack"
+            app:layout_constraintEnd_toEndOf="@+id/toolbarBack"
+            app:layout_constraintStart_toEndOf="@+id/imgBack"
+            app:layout_constraintTop_toTopOf="@+id/toolbarBack" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="234dp" />
+
+
+        <TextView
+            android:id="@+id/footer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#00A544"
+            android:fontFamily="sans-serif-condensed"
+            android:text="ПУ &quot;Нефтебурсервис&quot;"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="top"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <TextView
+            android:id="@+id/sertificat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbarBack" /><![CDATA[
+
+
+
+
+
+
+
+        />
+
+
+        ]]><!--</androidx.constraintlayout.widget.ConstraintLayout>-->
+        <!--</ScrollView>-->
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <!--</ScrollView>-->
+
+</ScrollView>

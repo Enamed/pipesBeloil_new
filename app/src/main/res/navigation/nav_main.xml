@@ -82,5 +82,12 @@
         <action
             android:id="@+id/action_btCard_to_btObFragment"
             app:destination="@id/btObFragment" />
+        <action
+            android:id="@+id/action_btCard_to_btTechical2"
+            app:destination="@id/btTechnical" />
     </fragment>
+    <fragment
+        android:id="@+id/btTechnical"
+        android:name="ru.netology.nmedia1022.fragment.bt.BtTechical"
+        android:label="BtTechnical" />
 </navigation>
