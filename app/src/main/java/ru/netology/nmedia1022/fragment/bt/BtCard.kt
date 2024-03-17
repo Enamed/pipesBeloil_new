@@ -1,14 +1,10 @@
 package ru.netology.nmedia1022.fragment.bt
 
-import android.R
-import android.R.id
 import android.content.Intent
 import android.os.Bundle
-import android.provider.AlarmClock.EXTRA_MESSAGE
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.EditText
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
@@ -33,7 +29,6 @@ class BtCard : Fragment(ru.netology.nmedia1022.R.layout.bt_card) {
                 val post = state.posts.find { it.id == arguments?.longArg }
 
                 if (post != null) {
-
                     naimenovanie.text = post.naimenovanie
                     diametTrub.text = post.diametrTrub
                     vnDimetrTrub.text = post.vnDimetrTrub
@@ -69,8 +64,6 @@ class BtCard : Fragment(ru.netology.nmedia1022.R.layout.bt_card) {
             if (it.id == 0L) {
                 return@observe
             }
-
-
         }
 
 //        viewModel.data.observe(viewLifecycleOwner) { state ->
@@ -79,24 +72,46 @@ class BtCard : Fragment(ru.netology.nmedia1022.R.layout.bt_card) {
 //        }
 
         binding.imgBack.setOnClickListener {
-            val redirect = arguments?.textArg
-            when (arguments?.textArg) {
-                redirect -> findNavController().navigate(
-                    ru.netology.nmedia1022.R.id.action_btCard_to_btObFragment,
-                    Bundle().apply {
-                        textArg = arguments?.textArg
-                    })
-            }
+//            val redirect = arguments?.textArg
+//
+//            when (arguments?.textArg) {
+//                redirect -> findNavController().navigate(
+//                    ru.netology.nmedia1022.R.id.action_btCard_to_btObFragment,
+//                    Bundle().apply {
+//                        textArg = arguments?.textArg
+//                    })
+//            }
+
+
+          //  getActivity()?.onBackPressed();
+
+            requireActivity().onBackPressedDispatcher.onBackPressed()
+
+
+
+
+
+
+//            val ids = binding.diametTrub.text.toString()
+//            bundle.putString("60,3", ids)
+//            findNavController().navigate(ru.netology.nmedia1022.R.id.action_btCard_to_btObFragment, Bundle().apply {
+//                textArg = ids
+//            })
+
+
+
         }
 
         binding.buttonSertificat.setOnClickListener {
 
-            val id = it.id
-            bundle.putString("id", id.toString())
-            findNavController().navigate(ru.netology.nmedia1022.R.id.action_btCard_to_btTechical2, Bundle().apply {
-               longArg = arguments?.longArg!!
-            })
-//ДОДЕЛАТЬ ПЕРЕДАЧУ ID АРГУМЕНТА не вручную
+    val id = it.id
+    bundle.putString("id", id.toString())
+    findNavController().navigate(ru.netology.nmedia1022.R.id.action_btCard_to_btTechical2, Bundle().apply {
+        longArg = arguments?.longArg!!
+    })
+
+
+
         }
 
 
@@ -107,9 +122,6 @@ class BtCard : Fragment(ru.netology.nmedia1022.R.layout.bt_card) {
 //            textArg = arguments?.textArg
 
 
-
-
-        val olae = binding.priznak.toString()
 
 
         //   Post {}

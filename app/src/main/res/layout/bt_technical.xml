@@ -19,13 +19,140 @@
         android:background="#FFFFFF"
         tools:context=".fragment.bt.BtTechical">
 
-        <!--<ScrollView-->
-        <!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
-        <!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
-        <!--    xmlns:tools="http://schemas.android.com/tools"-->
-        <!--    android:layout_width="match_parent"-->
-        <!--    android:layout_height="match_parent">-->
 
+        <TextView
+            android:id="@+id/dopuskdiametrzamok12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Натяг по резьбовому калибру:"
+
+            app:layout_constraintStart_toStartOf="@+id/dopuskdiametrzamok10"
+            app:layout_constraintTop_toBottomOf="@+id/dopuskdiametrzamok10" />
+
+        <TextView
+            android:id="@+id/dopuskdiametrzamok13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Натяг по гладкому калибру:"
+
+            app:layout_constraintStart_toStartOf="@+id/dopuskdiametrzamok12"
+            app:layout_constraintTop_toBottomOf="@+id/dopuskdiametrzamok12" />
+
+        <TextView
+            android:id="@+id/twozamokdiametr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="- 2 класс:"
+            app:layout_constraintStart_toStartOf="@+id/onezamokdiametr"
+            app:layout_constraintTop_toBottomOf="@+id/onezamokdiametr" />
+
+        <TextView
+            android:id="@+id/zamok3klass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="- 3 класс:"
+            app:layout_constraintStart_toStartOf="@+id/twozamokdiametr"
+            app:layout_constraintTop_toBottomOf="@+id/twozamokdiametr" />
+
+        <TextView
+            android:id="@+id/dopuskdiametrzamok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Допускаемый диаметр:"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/muftadlinazamok"
+            app:layout_constraintTop_toBottomOf="@+id/muftadlinazamok" />
+
+        <TextView
+            android:id="@+id/dopuskdiametrzamok2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Длина ниппеля (Lн):"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nippel" />
+
+        <TextView
+            android:id="@+id/dopuskdiametrzamok7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Длина муфты (Lм):"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nippel2" />
+
+        <TextView
+            android:id="@+id/dopuskdiametrzamok8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Длина (d4) конической выточки:"
+
+            app:layout_constraintStart_toStartOf="@+id/dopuskdiametrzamok7"
+            app:layout_constraintTop_toBottomOf="@+id/dopuskdiametrzamok7" />
+
+        <TextView
+            android:id="@+id/dopuskdiametrzamok9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Диаметр конической выточки(d4):"
+
+            app:layout_constraintStart_toStartOf="@+id/dopuskdiametrzamok8"
+            app:layout_constraintTop_toBottomOf="@+id/dopuskdiametrzamok8" />
+
+        <TextView
+            android:id="@+id/dopuskdiametrzamok3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Длина расточки:"
+
+            app:layout_constraintStart_toStartOf="@+id/dopuskdiametrzamok2"
+            app:layout_constraintTop_toBottomOf="@+id/dopuskdiametrzamok2" />
+
+        <TextView
+            android:id="@+id/dopuskdiametrzamok4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Диаметр упорного уступа(d6):"
+
+            app:layout_constraintStart_toStartOf="@+id/dopuskdiametrzamok3"
+            app:layout_constraintTop_toBottomOf="@+id/dopuskdiametrzamok3" />
+
+        <TextView
+            android:id="@+id/dopuskdiametrzamok10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Диаметр упорного торца(d6):"
+
+            app:layout_constraintStart_toStartOf="@+id/dopuskdiametrzamok9"
+            app:layout_constraintTop_toBottomOf="@+id/dopuskdiametrzamok9" />
+
+        <TextView
+            android:id="@+id/dopuskdiametrzamok5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Натяг по резьбовому калибру:"
+
+            app:layout_constraintStart_toStartOf="@+id/dopuskdiametrzamok4"
+            app:layout_constraintTop_toBottomOf="@+id/dopuskdiametrzamok4" />
+
+        <TextView
+            android:id="@+id/dopuskdiametrzamok6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Натяг по гладкому калибру:"
+
+            app:layout_constraintStart_toStartOf="@+id/dopuskdiametrzamok5"
+            app:layout_constraintTop_toBottomOf="@+id/dopuskdiametrzamok5" />
+
+        <TextView
+            android:id="@+id/onezamokdiametr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="- 1 класс:"
+            app:layout_constraintStart_toStartOf="@+id/dopuskdiametrzamok"
+            app:layout_constraintTop_toBottomOf="@+id/dopuskdiametrzamok" />
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbarBack"
@@ -70,24 +197,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_begin="234dp" />
+            app:layout_constraintGuide_begin="252dp" />
 
-
-        <TextView
-            android:id="@+id/footer"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:background="#00A544"
-            android:fontFamily="sans-serif-condensed"
-            android:text="ПУ &quot;Нефтебурсервис&quot;"
-            android:textAlignment="center"
-            android:textAllCaps="false"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent" />
 
         <androidx.constraintlayout.widget.Barrier
             android:id="@+id/barrier3"
@@ -100,22 +211,465 @@
             android:id="@+id/sertificat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="SERTIFICAT"
+            app:layout_constraintEnd_toStartOf="@+id/txtTitle" />
+
+        <TextView
+            android:id="@+id/twotelo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="- 2 класс:"
+            app:layout_constraintStart_toStartOf="@+id/onetelo"
+            app:layout_constraintTop_toBottomOf="@+id/onetelo" />
+
+        <TextView
+            android:id="@+id/onetelo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="- 1 класс:"
+            app:layout_constraintStart_toStartOf="@+id/dopusktelodiametr"
+            app:layout_constraintTop_toBottomOf="@+id/dopusktelodiametr" />
+
+        <TextView
+            android:id="@+id/oneklasstolshina"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="- 1 класс:"
+            app:layout_constraintStart_toStartOf="@+id/telodopusktolshina"
+            app:layout_constraintTop_toBottomOf="@+id/telodopusktolshina" />
+
+        <TextView
+            android:id="@+id/nippeldlinazamok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="- ниппель:"
+            app:layout_constraintStart_toStartOf="@+id/dlinazamka"
+            app:layout_constraintTop_toBottomOf="@+id/dlinazamka" />
+
+        <TextView
+            android:id="@+id/muftadlinazamok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:text="- муфта:"
+            app:layout_constraintStart_toStartOf="@+id/nippeldlinazamok"
+            app:layout_constraintTop_toBottomOf="@+id/nippeldlinazamok" />
+
+        <TextView
+            android:id="@+id/twoklasstolshina"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="- 2 класс:"
+            app:layout_constraintStart_toStartOf="@+id/oneklasstolshina"
+            app:layout_constraintTop_toBottomOf="@+id/oneklasstolshina" />
+
+        <TextView
+            android:id="@+id/polosaBt2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
             android:layout_marginTop="8dp"
-            android:text="TextView"
+            android:background="#00A544"
+            android:text="Контрольные параметры тела трубы, мм"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/toolbarBack" /><![CDATA[
+            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+        <TextView
+            android:id="@+id/polosaBt3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:background="#00A544"
+            android:text="Контрольные параметры замка трубы, мм"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/twotelo" />
 
 
+        <TextView
+            android:id="@+id/polosaBt4"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+
+            android:layout_marginTop="8dp"
+            android:background="#00A544"
+            android:text="контрольные параметры резьбы, мм"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/zamok3klass" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:text="Наименование трубы:"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbarBack" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Наименование резьбы:"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <TextView
+            android:id="@+id/dlinazamka"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Допустимая длина замка:"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/polosaBt3" />
+
+        <TextView
+            android:id="@+id/nippel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Ниппель"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/polosaBt4" />
+
+        <TextView
+            android:id="@+id/nippel2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Муфта"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dopuskdiametrzamok6" />
+
+        <TextView
+            android:id="@+id/naimenovanie"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="@+id/textView" />
+
+        <TextView
+            android:id="@+id/telodopusktolshina"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Допускаемая толщина:"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/polosaBt2" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="T"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/footer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.552"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dopuskdiametrzamok13" />
+
+        <TextView
+            android:id="@+id/footer"
+            android:layout_width="411dp"
+            android:layout_height="wrap_content"
+            android:background="#00A544"
+            android:fontFamily="sans-serif-condensed"
+            android:text="ПУ &quot;Нефтебурсервис&quot;"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/dopusktelodiametr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Допускаемый диаметр:"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/twoklasstolshina"
+            app:layout_constraintTop_toBottomOf="@+id/twoklasstolshina" />
 
 
+        <TextView
+            android:id="@+id/priznak"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:visibility="gone"
+            app:barrierAllowsGoneWidgets="false"
+            app:layout_constraintBottom_toTopOf="@+id/footer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
+        <TextView
+            android:id="@+id/pinPipes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            app:layout_constraintBottom_toBottomOf="@+id/textView14"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/textView14" />
 
+        <TextView
+            android:id="@+id/tolshinaOneClass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            app:layout_constraintBottom_toTopOf="@+id/twoklasstolshina"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/oneklasstolshina" />
 
-        />
+        <TextView
+            android:id="@+id/tolshinaTwoClass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            app:layout_constraintBottom_toBottomOf="@+id/twoklasstolshina"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/oneklasstolshina" />
 
+        <TextView
+            android:id="@+id/teloDiametrOneKlass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            app:layout_constraintBottom_toBottomOf="@+id/onetelo"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/onetelo" />
 
-        ]]><!--</androidx.constraintlayout.widget.ConstraintLayout>-->
+        <TextView
+            android:id="@+id/teloDiametrTwoKlass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            app:layout_constraintBottom_toBottomOf="@+id/twotelo"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/twotelo" />
+
+        <TextView
+            android:id="@+id/textView33"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15.1 - 17.5"
+            app:layout_constraintBottom_toBottomOf="@+id/dopuskdiametrzamok8"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/dopuskdiametrzamok7" />
+
+        <TextView
+            android:id="@+id/textView34"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15.875 +0.25;-0.15"
+            app:layout_constraintBottom_toBottomOf="@+id/dopuskdiametrzamok5"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/dopuskdiametrzamok4" />
+
+        <TextView
+            android:id="@+id/textView35"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12.7 max"
+            app:layout_constraintBottom_toBottomOf="@+id/dopuskdiametrzamok3"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/dopuskdiametrzamok2" />
+
+        <TextView
+            android:id="@+id/textView36"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 -12.5"
+            app:layout_constraintBottom_toBottomOf="@+id/dopuskdiametrzamok12"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/dopuskdiametrzamok10" />
+
+        <TextView
+            android:id="@+id/textView38"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+0,05; -1.48"
+            app:layout_constraintBottom_toBottomOf="@+id/dopuskdiametrzamok13"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/dopuskdiametrzamok12" />
+
+        <TextView
+            android:id="@+id/d6m"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            app:layout_constraintBottom_toTopOf="@+id/dopuskdiametrzamok12"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/dopuskdiametrzamok9" />
+
+        <TextView
+            android:id="@+id/textView43"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:text="±0.4"
+            app:layout_constraintBottom_toBottomOf="@+id/d6m"
+            app:layout_constraintStart_toEndOf="@+id/d6m"
+            app:layout_constraintTop_toTopOf="@+id/d6m" />
+
+        <TextView
+            android:id="@+id/d6n"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            app:layout_constraintBottom_toTopOf="@+id/dopuskdiametrzamok5"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/dopuskdiametrzamok3" />
+
+        <TextView
+            android:id="@+id/textView45"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:text="±0.4"
+            app:layout_constraintBottom_toBottomOf="@+id/d6n"
+            app:layout_constraintStart_toEndOf="@+id/d6n"
+            app:layout_constraintTop_toBottomOf="@+id/textView35" />
+
+        <TextView
+            android:id="@+id/natiagN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            app:layout_constraintBottom_toBottomOf="@+id/dopuskdiametrzamok6"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/dopuskdiametrzamok5" />
+
+        <TextView
+            android:id="@+id/diametrZamokOneClass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            app:layout_constraintBottom_toTopOf="@+id/twozamokdiametr"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/onezamokdiametr" />
+
+        <TextView
+            android:id="@+id/diametrZamokTwoClass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            app:layout_constraintBottom_toTopOf="@+id/zamok3klass"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/twozamokdiametr" />
+
+        <TextView
+            android:id="@+id/diametrZamokThreeClass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            app:layout_constraintBottom_toBottomOf="@+id/zamok3klass"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/twozamokdiametr" />
+
+        <TextView
+            android:id="@+id/dlinaZamkaN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            app:layout_constraintBottom_toBottomOf="@+id/nippeldlinazamok"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/nippeldlinazamok" />
+
+        <TextView
+            android:id="@+id/dlinaZamkaM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            app:layout_constraintBottom_toBottomOf="@+id/muftadlinazamok"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/muftadlinazamok" />
+
+        <TextView
+            android:id="@+id/vitochkaD4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            app:layout_constraintBottom_toTopOf="@+id/dopuskdiametrzamok10"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/dopuskdiametrzamok8" />
+
+        <TextView
+            android:id="@+id/textView27"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:text="+0.8; -0.4"
+            app:layout_constraintBottom_toTopOf="@+id/d6m"
+            app:layout_constraintStart_toEndOf="@+id/vitochkaD4"
+            app:layout_constraintTop_toBottomOf="@+id/textView33" />
+
+        <TextView
+            android:id="@+id/dlinaPinMufta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            app:layout_constraintBottom_toBottomOf="@+id/dopuskdiametrzamok7"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/dopuskdiametrzamok7" />
+
+        <TextView
+            android:id="@+id/textView29"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:text="+9.5"
+            app:layout_constraintBottom_toTopOf="@+id/textView33"
+            app:layout_constraintStart_toEndOf="@+id/dlinaPinMufta"
+            app:layout_constraintTop_toTopOf="@+id/dlinaPinMufta" />
+
+        <TextView
+            android:id="@+id/dlinaPinNippel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            app:layout_constraintBottom_toBottomOf="@+id/dopuskdiametrzamok2"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/dopuskdiametrzamok2" />
+
+        <TextView
+            android:id="@+id/textView31"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:text="-3"
+            app:layout_constraintBottom_toTopOf="@+id/textView35"
+            app:layout_constraintStart_toEndOf="@+id/dlinaPinNippel"
+            app:layout_constraintTop_toTopOf="@+id/dlinaPinNippel" /><!--</androidx.constraintlayout.widget.ConstraintLayout>-->
         <!--</ScrollView>-->
 
 

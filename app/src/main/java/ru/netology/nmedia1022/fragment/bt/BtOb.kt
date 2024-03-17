@@ -91,22 +91,26 @@ class BtOb: Fragment(R.layout.bt_ob) {
 
 
         binding.imgBack.setOnClickListener {
-            if (arguments?.textArg == "BT") {
-                  findNavController().navigate(
-                R.id.action_btObFragment_to_btFragment2)
-            }
-            else if (isNumeric(arguments?.textArg.toString())) {
-                findNavController().navigate(
-                    R.id.action_btObFragment_to_btFragment2)
-            }
-            else if (arguments?.textArg == "60,3") {
-                findNavController().navigate(
-                    R.id.action_btObFragment_to_btFragment2)
-            }
-            else {
-                findNavController().navigate(
-                    R.id.action_btObFragment_to_mainFragment)
-            }
+//            if (arguments?.textArg == "BT") {
+//                  findNavController().navigate(
+//                R.id.action_btObFragment_to_btFragment2)
+//            }
+//            else if (isNumeric(arguments?.textArg.toString())) {
+//                findNavController().navigate(
+//                    R.id.action_btObFragment_to_btFragment2)
+//            }
+//            else if (arguments?.textArg == "60,3") {
+//                findNavController().navigate(
+//                    R.id.action_btObFragment_to_btFragment2)
+//            }
+//            else {
+//                findNavController().navigate(
+//                    R.id.action_btObFragment_to_mainFragment)
+//            }
+
+            requireActivity().onBackPressedDispatcher.onBackPressed()
+
+
         }
 
 
@@ -121,7 +125,6 @@ class BtOb: Fragment(R.layout.bt_ob) {
 //             adapter.submitList(state.posts.sortedWith(compareBy({it.priznak}, {it.diametrTrub} )))
 
 
-                val yoRule = "< 42 < 60,3 < 73 < 89 < 102 < 114 < 127 < 140"
 
 
              //  adapter.submitList(state.posts.filter { it.priznak == arguments?.textArg })}

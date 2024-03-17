@@ -9,6 +9,7 @@ class CompanionArg {
     companion object{
         var Bundle.textArg : String? by TextArg
         var Bundle.longArg : Long by LongArg
+
     }
 
     object TextArg : ReadWriteProperty<Bundle, String?> {
@@ -20,6 +21,8 @@ class CompanionArg {
             thisRef.putString(property.name, value)
         }
     }
+
+
 
     object LongArg : ReadWriteProperty<Bundle, Long> {
         override fun getValue(thisRef: Bundle, property: KProperty<*>): Long {
