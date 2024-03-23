@@ -64,21 +64,21 @@
             app:layout_constraintTop_toBottomOf="@+id/muftadlinazamok" />
 
         <TextView
-            android:id="@+id/dopuskdiametrzamok2"
+            android:id="@+id/dlinaLn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:text="Длина ниппеля (Lн):"
+            android:text="Длина резьбы (Lн):"
 
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/nippel" />
 
         <TextView
-            android:id="@+id/dopuskdiametrzamok7"
+            android:id="@+id/dlinaLm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:text="Длина муфты (Lм):"
+            android:text="Длина резьбы (Lм):"
 
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/nippel2" />
@@ -89,8 +89,8 @@
             android:layout_height="wrap_content"
             android:text="Длина (d4) конической выточки:"
 
-            app:layout_constraintStart_toStartOf="@+id/dopuskdiametrzamok7"
-            app:layout_constraintTop_toBottomOf="@+id/dopuskdiametrzamok7" />
+            app:layout_constraintStart_toStartOf="@+id/dlinaLm"
+            app:layout_constraintTop_toBottomOf="@+id/dlinaLm" />
 
         <TextView
             android:id="@+id/dopuskdiametrzamok9"
@@ -107,8 +107,8 @@
             android:layout_height="wrap_content"
             android:text="Длина расточки:"
 
-            app:layout_constraintStart_toStartOf="@+id/dopuskdiametrzamok2"
-            app:layout_constraintTop_toBottomOf="@+id/dopuskdiametrzamok2" />
+            app:layout_constraintStart_toStartOf="@+id/dlinaLn"
+            app:layout_constraintTop_toBottomOf="@+id/dlinaLn" />
 
         <TextView
             android:id="@+id/dopuskdiametrzamok4"
@@ -206,13 +206,6 @@
             android:layout_height="wrap_content"
             app:barrierDirection="top"
             app:layout_constraintBottom_toBottomOf="parent" />
-
-        <TextView
-            android:id="@+id/sertificat"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="SERTIFICAT"
-            app:layout_constraintEnd_toStartOf="@+id/txtTitle" />
 
         <TextView
             android:id="@+id/twotelo"
@@ -484,7 +477,7 @@
             android:text="15.1 - 17.5"
             app:layout_constraintBottom_toBottomOf="@+id/dopuskdiametrzamok8"
             app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/dopuskdiametrzamok7" />
+            app:layout_constraintTop_toBottomOf="@+id/dlinaLm" />
 
         <TextView
             android:id="@+id/textView34"
@@ -502,7 +495,7 @@
             android:text="12.7 max"
             app:layout_constraintBottom_toBottomOf="@+id/dopuskdiametrzamok3"
             app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/dopuskdiametrzamok2" />
+            app:layout_constraintTop_toBottomOf="@+id/dlinaLn" />
 
         <TextView
             android:id="@+id/textView36"
@@ -638,9 +631,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="TextView"
-            app:layout_constraintBottom_toBottomOf="@+id/dopuskdiametrzamok7"
+            app:layout_constraintBottom_toBottomOf="@+id/dlinaLm"
             app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toTopOf="@+id/dopuskdiametrzamok7" />
+            app:layout_constraintTop_toTopOf="@+id/dlinaLm" />
 
         <TextView
             android:id="@+id/textView29"
@@ -657,12 +650,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="TextView"
-            app:layout_constraintBottom_toBottomOf="@+id/dopuskdiametrzamok2"
+            app:layout_constraintBottom_toBottomOf="@+id/dlinaLn"
             app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toTopOf="@+id/dopuskdiametrzamok2" />
+            app:layout_constraintTop_toTopOf="@+id/dlinaLn" />
 
         <TextView
-            android:id="@+id/textView31"
+            android:id="@+id/dopuskLn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="3dp"

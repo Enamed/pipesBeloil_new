@@ -140,10 +140,10 @@ class BtFragment: Fragment(R.layout.bt) {
         }
 
         binding.pipes140.setOnClickListener {
-            val ids = "140"
-            bundle.putString("140", ids)
+            val ids = "139.7"
+            bundle.putString("139.7", ids)
             findNavController().navigate(R.id.btObFragment, Bundle().apply {
-                textArg = "140"
+                textArg = "139.7"
             })
         }
 //        60,3
