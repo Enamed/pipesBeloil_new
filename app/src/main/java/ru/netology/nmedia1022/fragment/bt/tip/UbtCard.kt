@@ -33,17 +33,12 @@ class UbtCard : Fragment(ru.netology.nmedia1022.R.layout.ubt_card) {
                     naimenovanie.text = post.naimenovanie
                     diametTrub.text = post.diametrTrub
                     vnDimetrTrub.text = post.vnDimetrTrub
-
                     priznak.text = post.priznak
-
                     momentNew.text = post.momentNew
-
                     sigmaT.text = post.sigma_t
                     sigmaV.text = post.sigma_v
                     otnosRast.text = post.otnos_rast
-                    //  sertificat.text = post.sertificat
                 }
-
             }
         }
         viewModel.edited.observe(viewLifecycleOwner) {
@@ -58,59 +53,19 @@ class UbtCard : Fragment(ru.netology.nmedia1022.R.layout.ubt_card) {
 //        }
 
         binding.imgBack.setOnClickListener {
-//            val redirect = arguments?.textArg
-//
-//            when (arguments?.textArg) {
-//                redirect -> findNavController().navigate(
-//                    ru.netology.nmedia1022.R.id.action_btCard_to_btObFragment,
-//                    Bundle().apply {
-//                        textArg = arguments?.textArg
-//                    })
-//            }
-
-
-            //  getActivity()?.onBackPressed();
-
             requireActivity().onBackPressedDispatcher.onBackPressed()
-
-
-
-
-
-
-//            val ids = binding.diametTrub.text.toString()
-//            bundle.putString("60,3", ids)
-//            findNavController().navigate(ru.netology.nmedia1022.R.id.action_btCard_to_btObFragment, Bundle().apply {
-//                textArg = ids
-//            })
-
-
-
         }
 
-        binding.buttonSertificat.setOnClickListener {
 
+        //кнопка контрольные параметры
+        binding.buttonSertificat.setOnClickListener {
             val id = it.id
             bundle.putString("id", id.toString())
             findNavController().navigate(ru.netology.nmedia1022.R.id.action_ubtCard_to_btTechnical, Bundle().apply {
                 longArg = arguments?.longArg!!
             })
-
-
-
         }
 
-
-//        val id = post.id
-//        bundle.putLong("id", id)
-//        findNavController().navigate(ru.netology.nmedia1022.R.id.action_btObFragment_to_btCard, Bundle().apply {
-//            longArg = post.id
-//            textArg = arguments?.textArg
-
-
-
-
-        //   Post {}
         when (arguments?.textArg) {
             "BT" -> binding.txtTitle.setText("Общеоборотные трубы")
             "UBT" -> binding.txtTitle.setText("УБТ")
@@ -125,10 +80,6 @@ class UbtCard : Fragment(ru.netology.nmedia1022.R.layout.ubt_card) {
             "PREM" -> binding.txtTitle.setText("ОТ - резьба PREMIUM")
             "42" -> binding.txtTitle.setText("Бурильная труба ⌀42")
         }
-
-
-
-
 
         return binding.root
     }

@@ -2,7 +2,9 @@ package ru.netology.nmedia1022.viewmodel
 
 import FeedModel
 import android.app.Application
+import android.widget.Toast
 import androidx.lifecycle.*
+import kotlinx.coroutines.launch
 import ru.netology.nmedia1022.dto.Post
 import ru.netology.nmedia1022.repository.*
 import java.io.IOException
@@ -63,10 +65,10 @@ class PostViewModel(application: Application) : AndroidViewModel(application) {
 
 
 //обновление свайпом
-//    private val _dataState = MutableLiveData<FeedModel>()
-//    val dataState: LiveData<FeedModel>
-//        get() = _dataState
-////
+    private val _dataState = MutableLiveData<FeedModel>()
+    val dataState: LiveData<FeedModel>
+        get() = _dataState
+//
 
 
     fun loadPosts() {
@@ -81,6 +83,10 @@ class PostViewModel(application: Application) : AndroidViewModel(application) {
             } catch (e: IOException) {
                 // Получена ошибка
                 FeedModel(error = true)
+
+
+
+
             }.also(_data::postValue)
         }
     }
@@ -99,6 +105,8 @@ class PostViewModel(application: Application) : AndroidViewModel(application) {
 //            }.also(_data::postValue)
 //        }
 //    }
+
+
 
 //    OLOLOL
 //    fun save() {

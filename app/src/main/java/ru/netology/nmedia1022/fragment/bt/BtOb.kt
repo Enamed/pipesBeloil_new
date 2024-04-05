@@ -1,7 +1,6 @@
 package ru.netology.nmedia1022.fragment.bt
 
 
-import FeedModel
 import android.annotation.SuppressLint
 import android.content.Context
 import android.net.ConnectivityManager
@@ -99,34 +98,13 @@ class BtOb : Fragment(R.layout.bt_ob) {
             }
         }
 
-
-//кнопка назад
-
-
         binding.imgBack.setOnClickListener {
-//            if (arguments?.textArg == "BT") {
-//                  findNavController().navigate(
-//                R.id.action_btObFragment_to_btFragment2)
-//            }
-//            else if (isNumeric(arguments?.textArg.toString())) {
-//                findNavController().navigate(
-//                    R.id.action_btObFragment_to_btFragment2)
-//            }
-//            else if (arguments?.textArg == "60,3") {
-//                findNavController().navigate(
-//                    R.id.action_btObFragment_to_btFragment2)
-//            }
-//            else {
-//                findNavController().navigate(
-//                    R.id.action_btObFragment_to_mainFragment)
-//            }
-
             requireActivity().onBackPressedDispatcher.onBackPressed()
-
-
         }
 
-
+        //Проверяем интернет и вывод ТОАСТину
+        if (NetworkManager.isNetworkAvailable(requireContext()) == false) Toast.makeText(context,
+            "Отсутствует связь с интернетом", Toast.LENGTH_LONG).show()
 
 //Свайп для обновления данных
         val mSwipeRefreshLayout = binding.swipeRefreshLayout as SwipeRefreshLayout
@@ -134,6 +112,10 @@ class BtOb : Fragment(R.layout.bt_ob) {
             mSwipeRefreshLayout.isRefreshing = true
             viewModel.loadPosts()
             mSwipeRefreshLayout.postDelayed({
+                //выводим ТОАСТ при свайпе об отсутствии интернета
+                if (NetworkManager.isNetworkAvailable(requireContext()) == false) Toast.makeText(context,
+                    "Отсутствует связь с интернетом", Toast.LENGTH_LONG).show()
+
                 mSwipeRefreshLayout.isRefreshing = false
             }, 1000)
         }
@@ -141,9 +123,6 @@ class BtOb : Fragment(R.layout.bt_ob) {
 
 
 
-        //Проверяем интернет и вывод ТОАСТину
-        if (NetworkManager.isNetworkAvailable(requireContext()) == false) Toast.makeText(context,
-            "Отсутствует связь с интернетом", Toast.LENGTH_LONG).show()
 
 
 
